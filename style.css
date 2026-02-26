@@ -235,35 +235,3 @@ textarea{min-height:140px; resize:vertical}
    flex-wrap:nowrap; 
    white-space:nowrap;
 }
-
-/* Full-width footer that stretches across the screen */
-.footerBar{
-  margin-top: 34px;
-  border-top: 1px solid var(--border);
-  background: rgba(255,255,255,.45);
-}
-
-/* Inner footer content aligns with your main container width */
-.footerInner{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 18px 18px;
-
-  display:flex;
-  align-items:center;
-  justify-content: space-between; /* left + right */
-  gap: 12px;
-
-  white-space: nowrap;
-}
-
-/* Optional: hover for the link */
-.footerInner a:hover{ opacity: .85; }
-
-/* Optional mobile wrap */
-@media (max-width: 420px){
-  .footerInner{
-    white-space: normal;
-    flex-wrap: wrap;
-  }
-}
