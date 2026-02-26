@@ -26,7 +26,7 @@
 
 html{
   scroll-behavior: smooth; 
-  scroll-padding-top: calc(var(--navH) + 18px); /* NEW: prevents header covering sections */
+  scroll-padding-top: calc(var(--navH) + 18px); /* extra space hunder navigation bar to prevent covering sections */
 }
 
 body{
@@ -104,7 +104,6 @@ a:hover{opacity:.8}
 
 /* Make each section land lower at klicking on navigation */
 .section{
-   scroll-margin-top: calc(var(--navH) + 18px); /* extra space under fixed nav */
    padding-top: 6px; /* optional */
    margin-bottom: 128px;     /* adds space after each section */
 }
