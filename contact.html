@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yang Yang — Contact</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <div class="brand"><span class="dot"></span> Yang Yang</div>
+      <nav class="links">
+        <a class="pill" href="index.html">Yang Yang</a>
+        <a class="pill" href="publications.html">Publications</a>
+        <a class="pill" href="experience.html">Experience</a>
+        <a class="pill" href="academic-service.html">Academic Service</a>
+        <a class="pill active" href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section>
+      <h1>Contact</h1>
+      <div class="lead">Leave a message here (no JavaScript). This uses a form endpoint.</div>
+    </section>
+
+    <div class="hr"></div>
+
+    <section class="grid cards">
+      <article class="card half">
+        <div class="kicker">Message form</div>
+        <h2>Send me a message</h2>
+
+        <!-- Step 1: Create a Formspree form, then replace YOUR_FORM_ID below -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <!-- Step 2: Add fields (name/email/message) -->
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <!-- Step 3: Submit button -->
+          <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+            <button class="btn primary" type="submit">Send</button>
+            <a class="btn" href="mailto:you@example.com">Or email me directly</a>
+          </div>
+        </form>
+
+        <p style="margin-top:12px;">
+          <small>
+            Note: GitHub Pages alone can’t deliver form submissions. Using a form endpoint is the static-friendly approach.
+          </small>
+        </p>
+      </article>
+
+      <article class="card half">
+        <div class="kicker">Direct</div>
+        <h2>Other ways</h2>
+        <ul class="list">
+          <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noreferrer">Profile</a></li>
+          <li>GitHub: <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">@YOUR_GITHUB</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span>© Yang Yang</span>
+      <span><a href="index.html">Back home →</a></span>
+    </footer>
+  </div>
+</body>
+</html>
