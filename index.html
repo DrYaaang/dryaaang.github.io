@@ -1,1 +1,89 @@
-<h1>My portfolio</h1>
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <div class="brand"><span class="dot"></span> Your Name</div>
+      <nav class="links">
+        <a class="pill active" href="index.html">Home</a>
+        <a class="pill" href="projects.html">Projects</a>
+        <a class="pill" href="about.html">About</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Engineer building practical, modern systems ⚙️</h1>
+      <div class="lead">
+        Short intro: what you do, what you like building, and what you’re looking for.
+        Keep it to 2–3 sentences.
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="projects.html">View projects</a>
+        <a class="btn" href="about.html">About me</a>
+        <a class="btn" href="https://github.com/YOURUSERNAME" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn" href="mailto:you@example.com">Email</a>
+      </div>
+    </section>
+
+    <section class="grid cards">
+      <article class="card half">
+        <div class="kicker">Now</div>
+        <div class="titleRow"><h2>What I’m focusing on</h2></div>
+        <p>
+          Add 2–3 bullets in sentence form: e.g., “Data pipelines, API design, reliability, clean UI.”
+        </p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Backend</span><span class="tag">Cloud</span>
+        </div>
+      </article>
+
+      <article class="card half">
+        <div class="kicker">Highlights</div>
+        <div class="titleRow"><h2>Top projects</h2></div>
+        <p>
+          A quick teaser. Link to projects page for details.
+        </p>
+        <div class="tags">
+          <a class="tag" href="projects.html">See all →</a>
+        </div>
+      </article>
+
+      <article class="card third">
+        <div class="kicker">Strength</div>
+        <h2>Shipping</h2>
+        <p>From idea → MVP → production, with a focus on reliability and clarity.</p>
+      </article>
+
+      <article class="card third">
+        <div class="kicker">Strength</div>
+        <h2>Systems thinking</h2>
+        <p>Designing interfaces, tradeoffs, and maintainable architecture.</p>
+      </article>
+
+      <article class="card third">
+        <div class="kicker">Strength</div>
+        <h2>Collaboration</h2>
+        <p>Good docs, helpful reviews, and pragmatic communication.</p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> Your Name</span>
+      <span>
+        <a href="https://www.linkedin.com/in/YOURLINKEDIN/" target="_blank" rel="noreferrer">LinkedIn</a>
+        · <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noreferrer">GitHub</a>
+      </span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
