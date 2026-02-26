@@ -1,14 +1,14 @@
+/* Clean modern minimal: soft light background, crisp typography, subtle borders */
 :root{
-  --bg: #0b1220;
-  --card: rgba(255,255,255,.06);
-  --text: rgba(255,255,255,.92);
-  --muted: rgba(255,255,255,.72);
-  --border: rgba(255,255,255,.14);
-  --shadow: 0 14px 40px rgba(0,0,0,.35);
+  --bg: #f7f8fb;
+  --card: #ffffff;
+  --text: #0f172a;     /* slate-900 */
+  --muted: #475569;    /* slate-600 */
+  --border: rgba(15,23,42,.10);
+  --shadow: 0 10px 30px rgba(15,23,42,.08);
   --r: 18px;
   --max: 980px;
-  --accent1: #7c3aed;
-  --accent2: #06b6d4;
+  --accent: #2563eb;   /* blue-600 */
 }
 
 *{box-sizing:border-box}
@@ -16,90 +16,129 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-  color:var(--text);
-  background:
-    radial-gradient(1200px 600px at 10% 0%, rgba(124,58,237,.35), transparent 60%),
-    radial-gradient(1000px 600px at 90% 20%, rgba(6,182,212,.25), transparent 55%),
-    var(--bg);
+  color: var(--text);
+  background: radial-gradient(900px 500px at 10% 0%, rgba(37,99,235,.10), transparent 55%),
+              radial-gradient(900px 500px at 90% 10%, rgba(99,102,241,.10), transparent 55%),
+              var(--bg);
 }
 
-a{color:inherit;text-decoration:none}
-a:hover{opacity:.92}
-small{color:var(--muted)}
+a{color:inherit; text-decoration:none}
+a:hover{opacity:.9}
 
 .container{max-width:var(--max); margin:0 auto; padding:28px 18px 64px}
+
+/* Top nav */
 .nav{
-  display:flex; align-items:center; justify-content:space-between;
-  gap:14px; padding:14px 18px; margin:10px 0 26px;
-  border:1px solid var(--border); border-radius:999px;
-  background: rgba(255,255,255,.04); backdrop-filter: blur(10px);
+  display:flex; align-items:center; justify-content:space-between; gap:14px;
+  padding:12px 14px; margin:10px 0 26px;
+  border:1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(15,23,42,.06);
 }
-.brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
-.dot{
-  width:10px;height:10px;border-radius:50%;
-  background: linear-gradient(135deg, var(--accent1), var(--accent2));
-  box-shadow: 0 0 0 4px rgba(124,58,237,.16);
-}
-.links{display:flex; gap:8px; flex-wrap:wrap}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+.dot{width:9px;height:9px;border-radius:50%; background: var(--accent); box-shadow:0 0 0 4px rgba(37,99,235,.12)}
+.links{display:flex; gap:6px; flex-wrap:wrap}
 .pill{
-  padding:10px 14px; border-radius:999px;
+  padding:9px 12px;
+  border-radius:999px;
+  color: var(--muted);
   border:1px solid transparent;
-  color:var(--muted);
 }
 .pill.active, .pill:hover{
-  color:var(--text);
+  color: var(--text);
   border-color: var(--border);
-  background: rgba(255,255,255,.03);
+  background: rgba(15,23,42,.03);
 }
 
-.hero{
-  display:grid; gap:18px; margin:8px 0 28px;
-}
-h1{font-size: clamp(34px, 4vw, 48px); line-height:1.05; margin:0}
-.lead{font-size: clamp(16px, 2vw, 18px); color:var(--muted); max-width:62ch}
-.actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
+/* Typography */
+h1{font-size: clamp(34px, 4vw, 50px); line-height:1.06; margin:0}
+.lead{margin-top:10px; font-size: clamp(16px, 2vw, 18px); color: var(--muted); max-width:72ch}
+.kicker{color: var(--muted); font-weight:700; font-size:13px; letter-spacing:.2px}
+h2{margin:8px 0 8px; font-size:18px}
+p{margin:0; color: var(--muted); line-height:1.6}
 
-.btn{
-  padding:11px 14px; border-radius:999px;
-  border:1px solid var(--border);
-  background: rgba(255,255,255,.04);
-  box-shadow: 0 10px 24px rgba(0,0,0,.22);
-}
-.btn.primary{
-  border-color: transparent;
-  background: linear-gradient(135deg, rgba(124,58,237,.95), rgba(6,182,212,.9));
-}
+.hr{margin:18px 0; border:0; height:1px; background: rgba(15,23,42,.10)}
 
+/* Cards + layout */
 .grid{display:grid; gap:14px}
-.grid.cards{grid-template-columns: repeat(12, 1fr)}
+.cards{grid-template-columns: repeat(12, 1fr)}
 .card{
   grid-column: span 12;
-  padding:16px;
+  padding:18px;
   border:1px solid var(--border);
   border-radius: var(--r);
   background: var(--card);
   box-shadow: var(--shadow);
 }
 @media (min-width: 760px){
-  .card.half{grid-column: span 6}
-  .card.third{grid-column: span 4}
+  .half{grid-column: span 6}
+  .third{grid-column: span 4}
 }
 
-.kicker{color:var(--muted); font-weight:600; letter-spacing:.2px; font-size:13px}
-.titleRow{display:flex; align-items:flex-start; justify-content:space-between; gap:10px}
-h2{margin:6px 0 6px; font-size:18px}
-p{margin:0; color:var(--muted); line-height:1.55}
-
-.tags{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px}
-.tag{
-  font-size:12px; padding:6px 10px; border-radius:999px;
-  border:1px solid var(--border); color:var(--muted);
-  background: rgba(255,255,255,.03);
+/* Clean “profile header” block */
+.profile{
+  display:flex; flex-direction:column; gap:10px;
+}
+.metaRow{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+.badge{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:7px 10px; border-radius:999px;
+  border:1px solid var(--border);
+  background: rgba(15,23,42,.02);
+  color: var(--muted);
+  font-size:13px;
 }
 
+/* Icon links */
+.iconRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+.iconBtn{
+  display:inline-flex; align-items:center; gap:10px;
+  padding:10px 12px; border-radius:999px;
+  border:1px solid var(--border);
+  background: #fff;
+}
+.icon{
+  width:18px; height:18px; display:inline-block;
+  fill: rgba(15,23,42,.85);
+}
+.iconBtn strong{font-weight:700}
+
+/* Lists */
+.list{margin:10px 0 0; padding-left:18px; color: var(--muted)}
+.list li{margin:7px 0}
+
+/* Buttons */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 14px; border-radius:999px;
+  border:1px solid var(--border);
+  background: #fff;
+}
+.btn.primary{
+  border-color: transparent;
+  background: var(--accent);
+  color: #fff;
+}
+
+/* Form */
+label{display:block; margin:12px 0 8px; color: var(--muted); font-weight:700}
+input, textarea{
+  width:100%;
+  padding:12px 12px;
+  border-radius: 14px;
+  border:1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  outline:none;
+}
+textarea{min-height:140px; resize:vertical}
+
+/* Footer */
 .footer{
   margin-top:34px; padding-top:18px;
   border-top:1px solid var(--border);
-  color:var(--muted);
+  color: var(--muted);
   display:flex; gap:10px; justify-content:space-between; flex-wrap:wrap;
 }
