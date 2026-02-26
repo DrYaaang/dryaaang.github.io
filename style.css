@@ -201,6 +201,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
 
 /* ===== Buttons ===== */
 .btn{
+  font-size: 14px;
   display:inline-flex; align-items:center; justify-content:center;
   padding:10px 14px; border-radius:999px;
   border:1px solid var(--border);
