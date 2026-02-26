@@ -41,7 +41,7 @@ body{
     linear-gradient(180deg, #f7fbf7 0%, #f3faf4 35%, #f7fbf7 100%);
   background-attachment: scroll, scroll, scroll;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 200%;
 }
 
 a{color:inherit; text-decoration:none}
