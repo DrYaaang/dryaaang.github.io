@@ -225,8 +225,13 @@ textarea{min-height:140px; resize:vertical}
 
 /* ===== Footer ===== */
 .footer{
-  margin-top:34px; padding-top:18px;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  display:flex; gap:12px; justify-content:space-between; align-items:center; flex-wrap:nowrap; white-space:nowrap;
+   margin-top:34px; 
+   padding-top:18px;
+   border-top:1px solid var(--border);
+   color:var(--muted);
+   display:flex; 
+   justify-content:space-between; 
+   align-items:center; 
+   flex-wrap:nowrap; 
+   white-space:nowrap;
 }
