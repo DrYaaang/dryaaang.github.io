@@ -225,12 +225,21 @@ textarea{min-height:140px; resize:vertical}
 
 /* ===== Footer ===== */
 .footer{
-   margin-top:34px; 
-   padding-top:18px;
-   border-top:1px solid var(--border);
-   color:var(--muted);
-   display:flex; 
-   justify-content:space-between; 
-   flex-wrap:nowrap; 
-   white-space:nowrap;
+  margin-top: 34px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;          /* important */
+  gap: 12px;            /* adds breathing room even if narrow */
+
+  flex-wrap: nowrap;
+  white-space: nowrap;
+}
+.footer span:last-child{
+  margin-left: auto;    /* pushes "Back to top" to the far right */
 }
