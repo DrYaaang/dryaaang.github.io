@@ -159,16 +159,31 @@ p{margin:0; color: var(--muted); line-height:1.6}
   color: var(--muted);
   font-size:13px;
 }
-
-/* ===== Icon links ===== */
+/* ===== Icon links (using image files like .png) ===== */
 .iconRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+
 .iconBtn{
-  display:inline-flex; align-items:center; gap:10px;
-  padding:10px 12px; border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:999px;
   border:1px solid var(--border);
-  background: #fff;
+  background:#fff;
 }
-.icon{width:18px; height:18px; display:inline-block; fill: rgba(15,23,42,.85)}
+
+/* For PNG/SVG icons loaded via <img> */
+.iconImg{
+  width:18px;
+  height:18px;
+  object-fit: contain;
+  display:inline-block;
+}
+
+/* (Optional) if your PNGs are dark and you want them to match the green theme:
+   make them slightly transparent */
+.iconImg{ opacity:.9; }
+
 .iconBtn strong{font-weight:700}
 
 /* ===== Lists ===== */
