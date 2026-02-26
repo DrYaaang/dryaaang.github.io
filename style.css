@@ -1,6 +1,6 @@
 /* Clean modern minimal: soft light background, crisp typography, subtle borders */
 :root{
-  --bg: #f7f8fb;
+  --bg: ##f8f7fb;
   --card: #ffffff;
   --text: #0f172a;     /* slate-900 */
   --muted: #475569;    /* slate-600 */
@@ -8,7 +8,7 @@
   --shadow: 0 10px 30px rgba(15,23,42,.08);
   --r: 18px;
   --max: 980px;
-  --accent: #2563eb;   /* blue-600 */
+  --accent: ##165703;   /* blue-600 */
 }
 
 *{box-sizing:border-box}
