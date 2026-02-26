@@ -231,7 +231,6 @@ textarea{min-height:140px; resize:vertical}
    color:var(--muted);
    display:flex; 
    justify-content:space-between; 
-   align-items:center; 
    flex-wrap:nowrap; 
    white-space:nowrap;
 }
