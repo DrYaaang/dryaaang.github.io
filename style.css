@@ -104,9 +104,9 @@ a:hover{opacity:.8}
 
 /* Make each section land lower at klicking on navigation */
 .section{
-   scroll-margin-top: calc(var(--navH) + 0px); /* extra space under fixed nav */
+   scroll-margin-top: calc(var(--navH) + 18px); /* extra space under fixed nav */
    padding-top: 6px; /* optional */
-   margin-bottom: 108px;     /* adds space after each section */
+   margin-bottom: 128px;     /* adds space after each section */
 }
 
 
