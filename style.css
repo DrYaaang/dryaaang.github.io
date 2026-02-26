@@ -37,8 +37,9 @@ body{
   /* Continuous “one wallpaper” background:
      use fixed background layers so it doesn’t look tiled vertically */
   background:
-    radial-gradient(900px 520px at 12% 0%, rgba(34,197,94,.16), transparent 60%),
-    radial-gradient(900px 520px at 88% 10%, rgba(22,163,74,.14), transparent 62%),
+    radial-gradient(900px 520px at 13% 2%, rgba(34,197,94,.16), transparent 60%),
+    radial-gradient(900px 520px at 88% 15%, rgba(22,163,74,.14), transparent 62%),
+    radial-gradient(900px 520px at 15% 35%, rgba(236, 214, 209, .8), transparent 62%),
     linear-gradient(180deg, #f7fbf7 0%, #f3faf4 35%, #f7fbf7 100%);
   background-attachment: scroll, scroll, scroll;
   background-repeat: no-repeat;
