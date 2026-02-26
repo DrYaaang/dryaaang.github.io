@@ -1,148 +1,245 @@
-<!-- index.html (Home) — static, multi-page nav, clean modern style -->
 <!doctype html>
 <html lang="en">
 <head>
   <!-- Basic metadata -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yang Yang — Home</title>
+  <title>Yang Yang — Portfolio</title>
 
-  <!-- Step: load shared styling -->
+  <!-- Load styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="container">
 
-    <!-- Step: top navigation (tabs). "active" marks the current page -->
+    <!-- Fixed top navigation (anchors jump to sections on this same page) -->
     <header class="nav">
       <div class="brand"><span class="dot"></span> Yang Yang</div>
       <nav class="links">
-        <a class="pill active" href="index.html">Yang Yang</a>
-        <a class="pill" href="publications.html">Publications</a>
-        <a class="pill" href="experience.html">Experience</a>
-        <a class="pill" href="academic-service.html">Academic Service</a>
-        <a class="pill" href="contact.html">Contact</a>
+        <!-- Step: each href points to an element id below -->
+        <a class="pill" href="#home">Home</a>
+        <a class="pill" href="#publications">Publications</a>
+        <a class="pill" href="#experience">Experience</a>
+        <a class="pill" href="#service">Academic Service</a>
+        <a class="pill" href="#contact">Contact</a>
       </nav>
     </header>
 
-    <!-- Step: hero / profile section -->
-    <section class="profile">
-      <h1>Yang Yang</h1>
-      <div class="lead">
-        Write a short bio in 2–4 sentences: your focus areas, what you build, and what you care about.
-      </div>
+    <!-- HOME -->
+    <main id="home" class="section">
+      <section class="profile">
+        <h1>Yang Yang</h1>
+        <div class="lead">
+          Write a short bio in 2–4 sentences: your focus areas, what you build, and what you care about.
+        </div>
 
-      <!-- Step: quick badges (optional) -->
-      <div class="metaRow">
-        <span class="badge">Engineer</span>
-        <span class="badge">Research · Publications</span>
-        <span class="badge">Stockholm, Sweden</span>
-      </div>
+        <div class="metaRow">
+          <span class="badge">Engineer</span>
+          <span class="badge">Research · Publications</span>
+          <span class="badge">Stockholm, Sweden</span>
+        </div>
 
-      <!-- Step: clickable profile links (edit URLs) -->
-      <div class="iconRow">
-        <a class="iconBtn" href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noreferrer">
-          <!-- LinkedIn icon (inline SVG, no external dependency) -->
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM.5 23.5h4V7.5h-4v16zM8 7.5h3.8v2.2h.1c.5-1 1.9-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.4v9.6h-4v-8.5c0-2 0-4.6-2.8-4.6s-3.2 2.2-3.2 4.5v8.6H8v-16z"/>
-          </svg>
-          <strong>LinkedIn</strong>
-        </a>
+        <!-- Clickable profile links (edit URLs) -->
+        <div class="iconRow">
+          <a class="iconBtn" href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.5 1 4.98 2.12 4.98 3.5zM.5 23.5h4V7.5h-4v16zM8 7.5h3.8v2.2h.1c.5-1 1.9-2.2 4-2.2 4.3 0 5.1 2.8 5.1 6.4v9.6h-4v-8.5c0-2 0-4.6-2.8-4.6s-3.2 2.2-3.2 4.5v8.6H8v-16z"/>
+            </svg>
+            <strong>LinkedIn</strong>
+          </a>
 
-        <a class="iconBtn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">
-          <!-- GitHub icon -->
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M12 .5C5.73.5.75 5.63.75 12.02c0 5.12 3.16 9.46 7.54 11 .55.1.75-.25.75-.55v-2c-3.07.68-3.72-1.5-3.72-1.5-.5-1.32-1.22-1.67-1.22-1.67-1-.7.08-.7.08-.7 1.1.08 1.68 1.15 1.68 1.15.98 1.7 2.56 1.2 3.18.92.1-.72.38-1.2.7-1.48-2.45-.28-5.02-1.25-5.02-5.55 0-1.23.43-2.23 1.14-3.02-.12-.28-.5-1.42.1-2.95 0 0 .93-.3 3.05 1.15.9-.25 1.85-.38 2.8-.38.95 0 1.9.13 2.8.38 2.12-1.45 3.05-1.15 3.05-1.15.6 1.53.22 2.67.1 2.95.7.8 1.14 1.8 1.14 3.02 0 4.32-2.58 5.27-5.04 5.55.4.35.76 1.03.76 2.08v3.08c0 .3.2.66.76.55 4.38-1.54 7.54-5.88 7.54-11C23.25 5.63 18.27.5 12 .5z"/>
-          </svg>
-          <strong>GitHub</strong>
-        </a>
+          <a class="iconBtn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 .5C5.73.5.75 5.63.75 12.02c0 5.12 3.16 9.46 7.54 11 .55.1.75-.25.75-.55v-2c-3.07.68-3.72-1.5-3.72-1.5-.5-1.32-1.22-1.67-1.22-1.67-1-.7.08-.7.08-.7 1.1.08 1.68 1.15 1.68 1.15.98 1.7 2.56 1.2 3.18.92.1-.72.38-1.2.7-1.48-2.45-.28-5.02-1.25-5.02-5.55 0-1.23.43-2.23 1.14-3.02-.12-.28-.5-1.42.1-2.95 0 0 .93-.3 3.05 1.15.9-.25 1.85-.38 2.8-.38.95 0 1.9.13 2.8.38 2.12-1.45 3.05-1.15 3.05-1.15.6 1.53.22 2.67.1 2.95.7.8 1.14 1.8 1.14 3.02 0 4.32-2.58 5.27-5.04 5.55.4.35.76 1.03.76 2.08v3.08c0 .3.2.66.76.55 4.38-1.54 7.54-5.88 7.54-11C23.25 5.63 18.27.5 12 .5z"/>
+            </svg>
+            <strong>GitHub</strong>
+          </a>
 
-        <!-- Academic profiles (text buttons keep it clean) -->
-        <a class="iconBtn" href="https://orcid.org/YOUR_ORCID" target="_blank" rel="noreferrer">
-          <strong>ORCID</strong>
-        </a>
+          <a class="iconBtn" href="https://orcid.org/YOUR_ORCID" target="_blank" rel="noreferrer"><strong>ORCID</strong></a>
+          <a class="iconBtn" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noreferrer"><strong>Google Scholar</strong></a>
+          <a class="iconBtn" href="https://www.researchgate.net/profile/YOUR_NAME" target="_blank" rel="noreferrer"><strong>ResearchGate</strong></a>
+          <a class="iconBtn" href="mailto:you@example.com"><strong>Email</strong></a>
+          <a class="iconBtn" href="assets/cv.pdf" download><strong>Download CV</strong></a>
+        </div>
+      </section>
 
-        <a class="iconBtn" href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" rel="noreferrer">
-          <strong>Google Scholar</strong>
-        </a>
+      <div class="hr"></div>
 
-        <a class="iconBtn" href="https://www.researchgate.net/profile/YOUR_NAME" target="_blank" rel="noreferrer">
-          <strong>ResearchGate</strong>
-        </a>
+      <section class="grid cards">
+        <article class="card half">
+          <div class="kicker">Biography</div>
+          <h2>Biography</h2>
+          <p>
+            Add a slightly longer bio (4–8 lines). Mention what you work on, strengths, and current interests.
+          </p>
+        </article>
 
-        <!-- Email + CV download -->
-        <a class="iconBtn" href="mailto:you@example.com"><strong>Email</strong></a>
-        <a class="iconBtn" href="assets/cv.pdf" download><strong>Download CV</strong></a>
-      </div>
+        <article class="card half">
+          <div class="kicker">Education</div>
+          <h2>Education</h2>
+          <ul class="list">
+            <li><b>PhD</b>, University — Year–Year · Topic (optional)</li>
+            <li><b>MSc</b>, University — Year–Year</li>
+            <li><b>BSc</b>, University — Year–Year</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="kicker">Interests</div>
+          <h2>Research & interests</h2>
+          <ul class="list">
+            <li>Interest 1</li>
+            <li>Interest 2</li>
+            <li>Interest 3</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications" class="section">
+      <h1>Publications</h1>
+      <div class="lead">Papers and patents. Add DOI / PDF / code links if available.</div>
+      <div class="hr"></div>
+
+      <section class="grid cards">
+        <article class="card">
+          <div class="kicker">Papers</div>
+          <h2>Journal / Conference papers</h2>
+          <ul class="list">
+            <li><b>Paper Title</b> — Authors — Venue, Year. <a href="#">DOI</a> · <a href="#">PDF</a></li>
+            <li><b>Paper Title</b> — Authors — Venue, Year. <a href="#">DOI</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="kicker">Patents</div>
+          <h2>Patents</h2>
+          <ul class="list">
+            <li><b>Patent Title</b> — Patent No. / Country — Year. <a href="#">Link</a></li>
+          </ul>
+        </article>
+      </section>
     </section>
 
-    <div class="hr"></div>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h1>Experience</h1>
+      <div class="lead">Work experience with concise impact bullets.</div>
+      <div class="hr"></div>
 
-    <!-- Step: main content cards -->
-    <section class="grid cards">
-      <article class="card half">
-        <div class="kicker">Biography</div>
-        <h2>Biography</h2>
-        <p>
-          Add a slightly longer bio (4–8 lines). Mention what you work on, your strengths, and your current interests.
-        </p>
-      </article>
+      <section class="grid cards">
+        <article class="card">
+          <div class="kicker">Work</div>
+          <h2>Company — Role</h2>
+          <p>Year–Year · Location (optional)</p>
+          <ul class="list">
+            <li>Impact bullet (what you delivered + result)</li>
+            <li>Methods / tools used</li>
+            <li>Scope / collaboration</li>
+          </ul>
+        </article>
 
-      <article class="card half">
-        <div class="kicker">Interests</div>
-        <h2>Research & interests</h2>
-        <ul class="list">
-          <li>Interest 1 (e.g., NLP / Systems / Optimization)</li>
-          <li>Interest 2</li>
-          <li>Interest 3</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <div class="kicker">Education</div>
-        <h2>Education</h2>
-        <ul class="list">
-          <li><b>PhD</b>, University — Year–Year · Topic (optional)</li>
-          <li><b>MSc</b>, University — Year–Year</li>
-          <li><b>BSc</b>, University — Year–Year</li>
-        </ul>
-      </article>
-
-      <article class="card third">
-        <div class="kicker">Quick links</div>
-        <h2>Explore</h2>
-        <p>See publications and work experience in more detail.</p>
-        <div class="iconRow">
-          <a class="btn primary" href="publications.html">Publications</a>
-          <a class="btn" href="experience.html">Experience</a>
-        </div>
-      </article>
-
-      <article class="card third">
-        <div class="kicker">Academic service</div>
-        <h2>Teaching & reviewing</h2>
-        <p>Courses, supervision, peer-reviewing, and committees.</p>
-        <div class="iconRow">
-          <a class="btn" href="academic-service.html">Academic Service</a>
-        </div>
-      </article>
-
-      <article class="card third">
-        <div class="kicker">Contact</div>
-        <h2>Get in touch</h2>
-        <p>Send a short message via the contact page.</p>
-        <div class="iconRow">
-          <a class="btn" href="contact.html">Contact</a>
-        </div>
-      </article>
+        <article class="card">
+          <div class="kicker">Work</div>
+          <h2>Company — Role</h2>
+          <p>Year–Year</p>
+          <ul class="list">
+            <li>Impact bullet</li>
+            <li>Impact bullet</li>
+          </ul>
+        </article>
+      </section>
     </section>
 
-    <!-- Step: footer -->
-    <footer class="footer">
-      <span>© Yang Yang</span>
-      <span><a href="publications.html">Next: Publications →</a></span>
-    </footer>
+    <!-- ACADEMIC SERVICE -->
+    <section id="service" class="section">
+      <h1>Academic Service</h1>
+      <div class="lead">Teaching, supervising, peer reviewing, committees.</div>
+      <div class="hr"></div>
+
+      <section class="grid cards">
+        <article class="card half">
+          <div class="kicker">Teaching</div>
+          <h2>Teaching</h2>
+          <ul class="list">
+            <li>Course — Role — Year</li>
+            <li>Course — Role — Year</li>
+          </ul>
+        </article>
+
+        <article class="card half">
+          <div class="kicker">Supervision</div>
+          <h2>Supervision</h2>
+          <ul class="list">
+            <li>Student / topic — Year</li>
+            <li>Student / topic — Year</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="kicker">Reviewing</div>
+          <h2>Peer reviewing & committees</h2>
+          <ul class="list">
+            <li>Reviewer — Journal/Conference — Years</li>
+            <li>PC member — Conference — Year</li>
+          </ul>
+        </article>
+      </section>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <h1>Contact</h1>
+      <div class="lead">Leave a message. (Static sites need a form endpoint to actually receive messages.)</div>
+      <div class="hr"></div>
+
+      <section class="grid cards">
+        <article class="card half">
+          <div class="kicker">Message</div>
+          <h2>Send me a message</h2>
+
+          <!-- Replace YOUR_FORM_ID after creating a Formspree form (no JS required) -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <div style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn primary" type="submit">Send</button>
+              <a class="btn" href="mailto:you@example.com">Or email me directly</a>
+            </div>
+          </form>
+
+          <p style="margin-top:12px;">
+            <small>
+              GitHub Pages can’t send emails by itself. Use a form service (like Formspree) or just show your email.
+            </small>
+          </p>
+        </article>
+
+        <article class="card half">
+          <div class="kicker">Direct</div>
+          <h2>Other ways</h2>
+          <ul class="list">
+            <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank" rel="noreferrer">Profile</a></li>
+            <li>GitHub: <a href="https://github.com/YOUR_GITHUB" target="_blank" rel="noreferrer">@YOUR_GITHUB</a></li>
+          </ul>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <span>© Yang Yang</span>
+        <span><a href="#home">Back to top ↑</a></span>
+      </footer>
+    </section>
 
   </div>
 </body>
