@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Your Name</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <div class="brand"><span class="dot"></span> Your Name</div>
+      <nav class="links">
+        <a class="pill" href="index.html">Home</a>
+        <a class="pill active" href="projects.html">Projects</a>
+        <a class="pill" href="about.html">About</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Projects</h1>
+      <div class="lead">
+        Pick 3–8 solid projects. For each: problem → approach → result → links.
+      </div>
+    </section>
+
+    <section class="grid cards">
+      <article class="card half">
+        <div class="kicker">Featured</div>
+        <div class="titleRow">
+          <h2>Project One</h2>
+          <small>2025</small>
+        </div>
+        <p>One-line: what it does and who it helps.</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Postgres</span>
+        </div>
+        <div class="tags">
+          <a class="tag" href="https://github.com/YOURUSERNAME/project-one" target="_blank" rel="noreferrer">Code</a>
+          <a class="tag" href="https://example.com/demo" target="_blank" rel="noreferrer">Demo</a>
+        </div>
+      </article>
+
+      <article class="card half">
+        <div class="kicker">Featured</div>
+        <div class="titleRow">
+          <h2>Project Two</h2>
+          <small>2024</small>
+        </div>
+        <p>One-line: what it does and why it’s interesting.</p>
+        <div class="tags">
+          <span class="tag">TypeScript</span><span class="tag">React</span><span class="tag">Vite</span>
+        </div>
+        <div class="tags">
+          <a class="tag" href="https://github.com/YOURUSERNAME/project-two" target="_blank" rel="noreferrer">Code</a>
+          <a class="tag" href="https://example.com/demo" target="_blank" rel="noreferrer">Demo</a>
+        </div>
+      </article>
+
+      <article class="card third">
+        <div class="kicker">Project</div>
+        <h2>Project Three</h2>
+        <p>Short summary. Keep it punchy.</p>
+        <div class="tags">
+          <span class="tag">Docker</span><span class="tag">CI</span>
+        </div>
+        <div class="tags">
+          <a class="tag" href="#">Code</a><a class="tag" href="#">Demo</a>
+        </div>
+      </article>
+
+      <article class="card third">
+        <div class="kicker">Project</div>
+        <h2>Project Four</h2>
+        <p>Short summary.</p>
+        <div class="tags">
+          <span class="tag">Data</span><span class="tag">ML</span>
+        </div>
+        <div class="tags">
+          <a class="tag" href="#">Code</a><a class="tag" href="#">Demo</a>
+        </div>
+      </article>
+
+      <article class="card third">
+        <div class="kicker">Project</div>
+        <h2>Project Five</h2>
+        <p>Short summary.</p>
+        <div class="tags">
+          <span class="tag">C++</span><span class="tag">Embedded</span>
+        </div>
+        <div class="tags">
+          <a class="tag" href="#">Code</a><a class="tag" href="#">Demo</a>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> Your Name</span>
+      <span><a href="index.html">Back home</a></span>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
