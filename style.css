@@ -102,8 +102,10 @@ a:hover{opacity:.8}
 
 /* Make each section land lower at klicking on navigation */
 .section{
-  scroll-margin-top: calc(var(--navH) + 48px); /* NEW: extra space under fixed nav */
-  padding-top: 6px; /* optional */
+   scroll-margin-top: calc(var(--navH) + 24px); /* extra space under fixed nav */
+   padding-top: 6px; /* optional */
+   margin-bottom: 72px;     /* adds space after each section */
+}
 }
 
 /* ===== Typography ===== */
