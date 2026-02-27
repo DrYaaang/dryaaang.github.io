@@ -261,6 +261,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
   padding:8px 14px;
   border-radius:999px;
   border:0px solid var(--border);
+  box-shadow: var(--shadow);
   background:rgba(15,23,42,.05);
 
   /* Smooth hover animation */
@@ -272,6 +273,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
 .iconBtn:hover{
   transform: scale(1.1);
   background: rgba(15,23,42,.07);
+  box-shadow: 0 16px 44px rgba(15,23,42,.14);
 }
 
 /* For PNG/SVG icons loaded via <img> */
