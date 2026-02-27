@@ -18,15 +18,15 @@
   --accent: #16a34a;       /* green-600 */
   --accent2:#22c55e;       /* green-500 */
 
-  /* Fixed header height (used for scroll offset) */
-  --navH: 74px;
+  --navH: 74px;   /* Fixed navigation bar height */
+  --topOffset: calc(var(--navH) + 50px); /* Fixed offset from the top */
 }
 
 *{box-sizing:border-box}
 
 html{
   scroll-behavior: smooth; 
-  scroll-padding-top: calc(var(--navH) + 18px); /* extra space hunder navigation bar to prevent covering sections */
+  scroll-padding-top: var(--topOffset); /* extra space hunder navigation bar to prevent covering sections */
 }
 
 body{
@@ -106,14 +106,13 @@ a.links.equal .pill:active{
   text-decoration: none !important;
 }
 
-
-
-/* Keep content away from fixed header */
 .container{
   max-width:var(--max);
   margin:0 auto;
-  padding: calc(var(--navH) + 50px) 18px 64px; /* top padding prevents content hiding by navigation bar */
+  padding: var(--topOffset) 18px 64px; /* top padding prevents content hiding by navigation bar */
 }
+
+
 
 
 
