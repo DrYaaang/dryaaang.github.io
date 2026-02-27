@@ -6,7 +6,7 @@
 
 :root{
   --bg: #f7fbf7;           /* soft greenish background */
-  --card: rgba(255,255,255,.6);
+  --card: rgba(255,255,255,.5);
   --text: #0f172a;
   --muted: #475569;
   --border: rgba(15,23,42,.10);
@@ -184,7 +184,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
 .card:hover{
   transform: translateY(-3px) scale(1.02); /* slightly bigger */
   z-index: 5; /* draw above nearby cards */
-  background: rgba(255,255,255,.96);
+  background: rgba(255,255,255,.8);
   box-shadow: 0 16px 44px rgba(15,23,42,.14);
 }
 @media (min-width: 760px){
