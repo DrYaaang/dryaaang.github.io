@@ -100,9 +100,12 @@ a:hover{opacity:.8}
 
 /* Hover state when the mouse is over it */
 .links.equal .pill:hover{
-  color: var(--text);
-  border-color: var(--border);
-  background: rgba(15,23,42,.03);
+  font-size: 16px;      /* slightly bigger */
+  font-weight: 700;     /* bold */
+  color: var(--text);   /* optional: slightly darker */
+  background: transparent; /* keep no pill */
+  border-color: transparent; /* keep no border */
+}ckground: rgba(15,23,42,.03);
 }
 
 /* Make each section land lower at klicking on navigation */
