@@ -136,6 +136,8 @@ a.iconBtn:active{
   gap: 8px;
 }
 
+
+
 /* The default style of each navigation item */
 .links.equal .pill{
   display: inline-flex;
@@ -151,6 +153,10 @@ a.iconBtn:active{
   border-radius: 999px;
   color: var(--muted);
   border: 1px solid transparent;
+
+  /* For smooth hover */
+  transition: transform .12s ease, color .12s ease, font-weight .12s ease, background-color .12s ease;
+  transform-origin: center;
 }
 
 /* Hover state when the mouse is over it */
@@ -160,6 +166,11 @@ a.iconBtn:active{
   color: var(--text);   /* slightly darker */
   background: transparent; /* keep no pill */
   border-color: transparent; /* keep no border */
+}
+
+.links.equal .pill:focus,
+.links.equal .pill:active{
+  text-decoration: none !important;
 }
 
 /* Make each section land lower at klicking on navigation */
