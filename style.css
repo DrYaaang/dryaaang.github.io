@@ -95,16 +95,10 @@ a:hover{ text-decoration: underline; }
 a.iconBtn,
 a.iconBtn:hover,
 a.iconBtn:focus,
-a.iconBtn:active{
-  text-decoration: none !important;
-}
+a.iconBtn:active{ text-decoration: none !important; }
 
-a.links.equal .pill,
-a.links.equal .pill:hover,
-a.links.equal .pill:focus,
-a.links.equal .pill:active{
-  text-decoration: none !important;
-}
+nav.links.equal a.pill{ text-decoration: none !important; }
+
 
 .container{
   max-width:var(--max);
