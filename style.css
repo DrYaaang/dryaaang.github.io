@@ -112,7 +112,7 @@ a.links.equal .pill:active{
 .container{
   max-width:var(--max);
   margin:0 auto;
-  padding: calc(var(--navH) + 22px) 18px 64px; /* top padding prevents content hiding */
+  padding: calc(var(--navH) + 50px) 18px 64px; /* top padding prevents content hiding by navigation bar */
 }
 
 
