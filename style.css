@@ -110,7 +110,7 @@ a:hover{opacity:.8}
 /* Make each section land lower at klicking on navigation */
 .section{
    padding-top: 6px; /* optional */
-   margin-bottom: 128px;     /* adds space after each section */
+   margin-bottom: 180px;     /* adds space after each section */
 }
 
 
