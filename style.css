@@ -6,7 +6,7 @@
 
 :root{
   --bg: #f7fbf7;           /* soft greenish background */
-  --card: rgba(255,255,255,.8);
+  --card: rgba(255,255,255,.6);
   --text: #0f172a;
   --muted: #475569;
   --border: rgba(15,23,42,.10);
@@ -101,7 +101,7 @@ a:hover{opacity:.7}
 
 /* Hover state when the mouse is over it */
 .links.equal .pill:hover{
-  transform: scale(1.2);  /* visually bigger, bar height stays the same */
+  transform: scale(1.05);  /* visually bigger, bar height stays the same */
   font-weight: 700;     /* bold */
   color: var(--text);   /* slightly darker */
   background: transparent; /* keep no pill */
@@ -137,6 +137,12 @@ p{margin:0; color: var(--muted); line-height:1.6}
   border-radius: var(--r);
   background: var(--card);
   box-shadow: var(--shadow);
+  position: relative;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.card:hover{
+  transform: translateY(-3px) scale(1.015); /* slightly bigger */
+  z-index: 5; /* draw above nearby cards */
 }
 @media (min-width: 760px){
   .half{grid-column: span 6}
