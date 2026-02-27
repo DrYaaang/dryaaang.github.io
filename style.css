@@ -232,6 +232,36 @@ p{margin:0; color: var(--muted); line-height:1.6}
 .list{margin:10px 0 0; padding-left:18px; color: var(--muted)}
 .list li{margin:7px 0}
 
+/* ===== Education: invisible 3-column table ===== */
+.eduTable3{
+  display: grid;
+  grid-template-columns: minmax(240px, 1.2fr) 2.4fr 72px; /* degree | inst | year */
+  column-gap: 16px;
+  row-gap: 10px;
+  margin-top: 10px;
+  align-items: start;
+}
+
+.eduDegree{ color: var(--text); }
+.eduInst{ color: var(--muted); }
+.eduYear{
+  color: var(--muted);
+  text-align: right;        /* year aligned */
+  font-variant-numeric: tabular-nums; /* nicer number alignment */
+}
+
+/* Mobile: stack nicely */
+@media (max-width: 720px){
+  .eduTable3{
+    grid-template-columns: 1fr; /* stack */
+    row-gap: 6px;
+  }
+  .eduYear{
+    text-align: left;
+    padding-bottom: 12px; /* space between entries */
+  }
+}
+
 /* ===== Buttons ===== */
 .btn{
   font-size: 16px;
