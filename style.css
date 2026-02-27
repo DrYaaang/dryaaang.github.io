@@ -209,11 +209,12 @@ p{margin:0; color: var(--muted); line-height:1.6}
 .iconBtn{
   display:inline-flex;
   align-items:center;
+  font-size: 13px;   /* text font size */
   gap:10px;
   padding:6px 8px;
   border-radius:999px;
   border:1px solid var(--border);
-  background:rgba(15,23,42,.02);
+  background:rgba(15,23,42,.05);
 }
 
 /* For PNG/SVG icons loaded via <img> */
