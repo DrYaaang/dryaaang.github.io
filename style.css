@@ -50,7 +50,7 @@ body{
   radial-gradient(950px 700px at 16% 13%, rgba(255,214,165,.22), transparent 65%),
 
   /* Subtle purple/lavender glow */
-  radial-gradient(700px 500px at 78% 18%, rgba(168, 85, 247, .18), transparent 62%),
+  radial-gradient(700px 500px at 78% 18%, rgba(168, 85, 247, .12), transparent 65%),
 
   /* Mint green wash (center, airy) */
   radial-gradient(1300px 1600px at 50% 32%, rgba(52, 211, 153, .16), transparent 58%),
