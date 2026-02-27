@@ -89,8 +89,8 @@ a:hover{opacity:.8}
   justify-content: center;
   text-align: center;
 
-  font-size: 16px; /* text size */
-  font-weight: 600; /* boldness (400 normal, 600 semi-bold, 700 bold) */
+  font-size: 14px; /* text size */
+  font-weight: 500; /* boldness (400 normal, 600 semi-bold, 700 bold) */
 
   padding: 9px 12px;
   border-radius: 999px;
@@ -100,7 +100,7 @@ a:hover{opacity:.8}
 
 /* Hover state when the mouse is over it */
 .links.equal .pill:hover{
-  font-size: 18px;      /* slightly bigger */
+  font-size: 16px;      /* slightly bigger */
   font-weight: 700;     /* bold */
   color: var(--text);   /* slightly darker */
   background: transparent; /* keep no pill */
