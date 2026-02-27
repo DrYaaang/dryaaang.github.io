@@ -129,7 +129,7 @@ a:hover{opacity:.7}
   text-align: center;
   transform-origin: center;
 
-  font-size: 16px; /* text size */
+  font-size: 18px; /* text size */
   font-weight: 500; /* boldness (400 normal, 600 semi-bold, 700 bold) */
 
   padding: 9px 12px;
@@ -140,7 +140,7 @@ a:hover{opacity:.7}
 
 /* Hover state when the mouse is over it */
 .links.equal .pill:hover{
-  transform: scale(1.05);  /* visually bigger, bar height stays the same */
+  transform: scale(1.1);  /* visually bigger, bar height stays the same */
   font-weight: 700;     /* bold */
   color: var(--text);   /* slightly darker */
   background: transparent; /* keep no pill */
