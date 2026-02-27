@@ -60,7 +60,7 @@ a:hover{opacity:.65}
 /* ===== Fixed top navigation (equal tabs) ===== */
 .nav{
   position: fixed;
-  top: 18px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: min(var(--max), calc(100% - 36px));
@@ -70,7 +70,7 @@ a:hover{opacity:.65}
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: 999px;
-  background: rgba(255,255,255,.78);
+  background: rgba(255,255,255,.7);
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(15,23,42,.08);
 }
@@ -88,8 +88,9 @@ a:hover{opacity:.65}
   display: inline-flex;
   justify-content: center;
   text-align: center;
+  transform-origin: center;
 
-  font-size: 14px; /* text size */
+  font-size: 16px; /* text size */
   font-weight: 500; /* boldness (400 normal, 600 semi-bold, 700 bold) */
 
   padding: 9px 12px;
@@ -100,7 +101,7 @@ a:hover{opacity:.65}
 
 /* Hover state when the mouse is over it */
 .links.equal .pill:hover{
-  font-size: 16px;      /* slightly bigger */
+  transform: scale(1.2);  /* visually bigger, bar height stays the same */
   font-weight: 700;     /* bold */
   color: var(--text);   /* slightly darker */
   background: transparent; /* keep no pill */
