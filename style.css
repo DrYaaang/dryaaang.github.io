@@ -264,7 +264,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
   border-radius:999px;
   border:0px solid var(--border);
   box-shadow: var(--shadow);
-  background:rgba(15,23,42,.07);
+  background:rgba(0,0,0,.1);
 
   /* Smooth hover animation */
   transition: transform .12s ease, background-color .12s ease, border-color .12s ease;
@@ -274,7 +274,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
 /* Hover: slightly bigger + less transparent background */
 .iconBtn:hover{
   transform: scale(1.1);
-  background: rgba(15,23,42,.03);
+  background: rgba(255,255,255,.1);
   box-shadow: 0 16px 44px rgba(15,23,42,.14);
 }
 
