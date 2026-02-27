@@ -35,6 +35,8 @@ body{
    /* font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; */
    /* uncomment the above line to use the default font */
    
+   font-size: 17px;     /* increase base text size */
+   line-height: 1.5;    /* improves readability */
    color: var(--text);
 
   /* Continuous “one wallpaper” background:
@@ -159,7 +161,7 @@ a:hover{opacity:.7}
 
 /* ===== Typography ===== */
 h1{font-family: "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-   font-size: clamp(28px, 3.2vw, 40px); line-height:1.06; margin:0; letter-spacing: 0.03em;}
+   font-size: clamp(28px, 3.2vw, 40px); line-height:1.06; margin:0; letter-spacing: 0.05em;}
 h2{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
    margin:8px 0 8px; font-size:20px; letter-spacing: 0.02em;}
 p{margin:0; color: var(--muted); line-height:1.6}
@@ -298,7 +300,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
 }
 
 /* ===== Form ===== */
-label{display:block; margin:12px 0 8px; color: var(--muted); font-weight:700; font-size: 14px;}
+label{display:block; margin:12px 0 8px; color: var(--muted); font-weight:700; font-size: 16px;}
 input, textarea{
   width:100%;
   padding:12px 12px;
