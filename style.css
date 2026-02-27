@@ -113,6 +113,11 @@ a:hover{opacity:.8}
    margin-bottom: 180px;     /* adds space after each section */
 }
 
+/* Extra space after the last section so it can scroll above the footer */
+#contact{
+  padding-bottom: 300px;  /* adjust: 120–220px */
+}
+
 
 /* ===== Typography ===== */
 h1{font-size: clamp(30px, 3.5vw, 44px); line-height:1.06; margin:0}
@@ -220,11 +225,6 @@ input, textarea{
   outline:none;
 }
 textarea{min-height:140px; resize:vertical}
-
-/* Extra space after the last section so it can scroll above the footer */
-#contact{
-  padding-bottom: 300px;  /* adjust: 120–220px */
-}
 
 /* ===== Footer ===== */
 .footer{
