@@ -83,11 +83,14 @@ a:hover{opacity:.8}
   gap: 8px;
 }
 
-/* Each tab centered */
+/* The default style of each navigation item */
 .links.equal .pill{
   display: inline-flex;
   justify-content: center;
   text-align: center;
+
+  font-size: 14px; /* text size */
+  font-weight: 500; /* boldness (400 normal, 600 semi-bold, 700 bold) */
 
   padding: 9px 12px;
   border-radius: 999px;
@@ -95,7 +98,7 @@ a:hover{opacity:.8}
   border: 1px solid transparent;
 }
 
-/* Hover state */
+/* Hover state when the mouse is over it */
 .links.equal .pill:hover{
   color: var(--text);
   border-color: var(--border);
