@@ -223,7 +223,7 @@ textarea{min-height:140px; resize:vertical}
 
 /* Extra space after the last section so it can scroll above the footer */
 #contact{
-  padding-bottom: 140px;  /* adjust: 120–220px */
+  padding-bottom: 300px;  /* adjust: 120–220px */
 }
 
 /* ===== Footer ===== */
