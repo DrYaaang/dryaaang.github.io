@@ -44,13 +44,13 @@ body{
   radial-gradient(1050px 650px at 10% 0%, rgba(20, 83, 45, .22), transparent 62%),
 
   /* Lake green glow (top-right, fresh) */
-  radial-gradient(1050px 650px at 92% 9%, rgba(22, 163, 74, .20), transparent 64%),
+  radial-gradient(1050px 650px at 92% 7%, rgba(22, 163, 74, .20), transparent 64%),
 
   /* Warm sand glow (very subtle, top-right) */
-  radial-gradient(950px 700px at 16% 13%, rgba(255,214,165,.22), transparent 65%),
+  radial-gradient(950px 700px at 16% 13%, rgba(255,214,165,.24), transparent 65%),
 
   /* Subtle purple/lavender glow */
-  radial-gradient(700px 500px at 78% 18%, rgba(168, 85, 247, .12), transparent 65%),
+  radial-gradient(700px 500px at 82% 16%, rgba(168, 85, 247, .11), transparent 75%),
 
   /* Mint green wash (center, airy) */
   radial-gradient(1300px 1600px at 50% 32%, rgba(52, 211, 153, .16), transparent 58%),
