@@ -158,15 +158,6 @@ p{margin:0; color: var(--muted); line-height:1.6}
   background: #fff;
 }
 
-.metaRow{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-.badge{
-  display:inline-flex; align-items:center; gap:8px;
-  padding:7px 10px; border-radius:999px;
-  border:1px solid var(--border);
-  background: rgba(15,23,42,.02);
-  color: var(--muted);
-  font-size:13px;
-}
 /* ===== Icon links (using image files like .png) ===== */
 .iconRow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
 
