@@ -68,7 +68,7 @@ body{
   radial-gradient(1100px 950px at 88% 82%, rgba(255, 196, 120, .20), transparent 66%),
 
   /* Forest green glow (bottom-right, deeper) */
-  radial-gradient(1050px 650px at 92% 20%, rgba(20, 83, 45, .25), transparent 65%),
+  radial-gradient(1050px 650px at 92% 98%, rgba(20, 83, 45, .25), transparent 68%),
 
   /* Base gradient (slightly greener and smoother) */
   linear-gradient(180deg, #f6fbf7 0%, #eef9f3 40%, #f6fbf7 100%);
