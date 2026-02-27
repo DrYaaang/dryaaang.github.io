@@ -46,15 +46,18 @@ body{
   /* Green glow (top-right) */
   radial-gradient(950px 560px at 88% 10%, rgba(22,163,74,.16), transparent 62%),
 
+  /* Warm sand glow (very subtle, top-right) */
+  radial-gradient(950px 700px at 15% 12%, rgba(255,214,165,.18), transparent 65%),
+
   /* Soft green “center wash” to reduce flat areas */
   radial-gradient(1100px 1400px at 50% 35%, rgba(16,185,129,.10), transparent 58%),
 
   /* Warm peach glow (subtle, balanced) */
   /* Increase alpha to make it more warm */ 
-  radial-gradient(900px 600px at 18% 40%, rgba(255,182,163,.22), transparent 62%),
+  radial-gradient(900px 600px at 18% 40%, rgba(255,182,163,.25), transparent 62%),
 
   /* Warm sand glow (very subtle, lower-right) */
-  radial-gradient(950px 700px at 85% 75%, rgba(255,214,165,.14), transparent 65%),
+  radial-gradient(950px 700px at 85% 75%, rgba(255,214,165,.18), transparent 65%),
 
   /* Base gradient (slight green tint) */
   linear-gradient(180deg, #f7fbf7 0%, #f1faf4 38%, #f7fbf7 100%);
