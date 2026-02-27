@@ -50,6 +50,7 @@ body{
   radial-gradient(1100px 1400px at 50% 35%, rgba(16,185,129,.10), transparent 58%),
 
   /* Warm peach glow (subtle, balanced) */
+  /* Increase alpha to make it more warm */ 
   radial-gradient(900px 600px at 18% 40%, rgba(255,182,163,.22), transparent 62%),
 
   /* Warm sand glow (very subtle, lower-right) */
