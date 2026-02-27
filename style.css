@@ -102,7 +102,7 @@ a:hover{opacity:.8}
 .links.equal .pill:hover{
   font-size: 18px;      /* slightly bigger */
   font-weight: 700;     /* bold */
-  color: var(--text);   /* optional: slightly darker */
+  color: var(--text);   /* slightly darker */
   background: transparent; /* keep no pill */
   border-color: transparent; /* keep no border */
 }
@@ -220,6 +220,11 @@ input, textarea{
   outline:none;
 }
 textarea{min-height:140px; resize:vertical}
+
+/* Extra space after the last section so it can scroll above the footer */
+#contact{
+  padding-bottom: 140px;  /* adjust: 120–220px */
+}
 
 /* ===== Footer ===== */
 .footer{
