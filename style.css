@@ -91,11 +91,18 @@ background:
 a{color:inherit; text-decoration:none}
 a:hover{ text-decoration: underline; }
 
-/* Never underline icon buttons (normal + hover) */
+/* Never underline icon & navigation buttons (normal and hover) */
 a.iconBtn,
 a.iconBtn:hover,
 a.iconBtn:focus,
 a.iconBtn:active{
+  text-decoration: none !important;
+}
+
+a.links.equal .pill,
+a.links.equal .pill:hover,
+a.links.equal .pill:focus,
+a.links.equal .pill:active{
   text-decoration: none !important;
 }
 
@@ -166,11 +173,6 @@ a.iconBtn:active{
   color: var(--text);   /* slightly darker */
   background: transparent; /* keep no pill */
   border-color: transparent; /* keep no border */
-}
-
-.links.equal .pill:focus,
-.links.equal .pill:active{
-  text-decoration: none !important;
 }
 
 /* Make each section land lower at klicking on navigation */
