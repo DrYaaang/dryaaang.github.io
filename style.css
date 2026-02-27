@@ -176,7 +176,7 @@ a.iconBtn:active{
 /* Make each section land lower at klicking on navigation */
 .section{
    padding-top: 6px; /* optional */
-   margin-bottom: 300px;     /* adds space after each section */
+   margin-bottom: 600px;     /* adds space after each section */
 }
 
 /* Extra space after the last section so it can scroll above the footer */
