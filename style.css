@@ -214,7 +214,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
   align-items:center;
   font-size: 13px;   /* text font size */
   gap:10px;
-  padding:6px 8px;
+  padding:10px 12px;
   border-radius:999px;
   border:1px solid var(--border);
   background:rgba(15,23,42,.05);
