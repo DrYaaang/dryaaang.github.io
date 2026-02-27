@@ -87,7 +87,7 @@ background:
 }
 
 a{color:inherit; text-decoration:none}
-a:hover{opacity:.7}
+a:hover{ text-decoration: underline; }
 
 /* Keep content away from fixed header */
 .container{
