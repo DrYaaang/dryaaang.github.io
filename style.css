@@ -247,16 +247,20 @@ p{margin:0; color: var(--muted); line-height:1.6}
   align-items:center;
   font-size: 13px;   /* text font size */
   gap:10px;
-  padding:6px 12px;
+  padding:8px 14px;
   border-radius:999px;
   border:0px solid var(--border);
-  background:rgba(15,23,42,.03);
+  background:rgba(15,23,42,.05);
+
+  /* Smooth hover animation */
+  transition: transform .12s ease, background-color .12s ease, border-color .12s ease;
+  transform-origin: center;
 }
 
 /* Hover: slightly bigger + less transparent background */
 .iconBtn:hover{
   transform: scale(1.1);
-  background: rgba(15,23,42,.05);
+  background: rgba(15,23,42,.07);
 }
 
 /* For PNG/SVG icons loaded via <img> */
