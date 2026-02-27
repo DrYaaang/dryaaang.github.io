@@ -247,11 +247,19 @@ p{margin:0; color: var(--muted); line-height:1.6}
   row-gap: 10px;
   margin-top: 10px;
   align-items: start;
+  position: relative;
   padding-left: 18px;   /* indent 18px before the first column */
 }
 
-.eduDegree{color: var(--text); }
-.eduInst{color: var(--muted); }
+.eduDegree{position: relative; color: var(--text);}
+.eduTable3 .eduDegree::before{                /* add bullet point */
+  content: "•";
+  position: absolute;
+  left: -18px;          
+  top: 0.15em;          
+  color: var(--muted);  
+}
+.eduInst{color: var(--muted);}
 .eduYear{
   color: var(--muted);
   text-align: right;        /* year aligned */
