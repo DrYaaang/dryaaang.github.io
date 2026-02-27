@@ -49,8 +49,8 @@ body{
   /* Warm sand glow (very subtle, top-right) */
   radial-gradient(950px 700px at 16% 13%, rgba(255,214,165,.22), transparent 65%),
 
-  /* Subtle purple/lavender glow (adds depth without fighting the green) */
-  radial-gradient(700px 500px at 78% 18%, rgba(168, 85, 247, .14), transparent 62%),
+  /* Subtle purple/lavender glow */
+  radial-gradient(700px 500px at 78% 18%, rgba(168, 85, 247, .18), transparent 62%),
 
   /* Mint green wash (center, airy) */
   radial-gradient(1300px 1600px at 50% 32%, rgba(52, 211, 153, .16), transparent 58%),
@@ -65,7 +65,10 @@ body{
   radial-gradient(950px 650px at 16% 40%, rgba(255, 156, 122, .22), transparent 62%),
 
   /* Warm amber/sand glow (stronger + cozy) */
-  radial-gradient(1100px 950px at 88% 78%, rgba(255, 196, 120, .20), transparent 66%),
+  radial-gradient(1100px 950px at 88% 82%, rgba(255, 196, 120, .20), transparent 66%),
+
+  /* Forest green glow (bottom-right, deeper) */
+  radial-gradient(1050px 650px at 92% 20%, rgba(20, 83, 45, .25), transparent 65%),
 
   /* Base gradient (slightly greener and smoother) */
   linear-gradient(180deg, #f6fbf7 0%, #eef9f3 40%, #f6fbf7 100%);
