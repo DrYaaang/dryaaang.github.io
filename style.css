@@ -13,6 +13,7 @@
   --shadow: 0 10px 30px rgba(15,23,42,.08);
   --r: 18px;
   --max: 980px;
+  --bodyFontSize: 17px;
 
   /* Green-ish theme */
   --accent: #16a34a;       /* green-600 */
@@ -35,7 +36,7 @@ body{
    /* font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; */
    /* uncomment the above line to use the default font */
    
-   font-size: 17px;     /* increase base text size */
+   font-size: var(--bodyFontSize);     /* increase base text size */
    line-height: 1.5;    /* improves readability */
    color: var(--text);
 
@@ -313,7 +314,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
   float: right;
   color: var(--muted);
   font-weight: 500;
-  font-size: 1em;}
+  font-size: var(--bodyFontSize) 0.9em;}
 
 
 
