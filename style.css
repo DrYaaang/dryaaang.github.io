@@ -404,11 +404,9 @@ textarea{min-height:140px; resize:vertical}
   display: flex;
   align-items: center;
   justify-content: space-between; /* left + right */
+  padding-bottom: 120px;  /* extra space after footer */
 }
 
 .footer .footerRight{
   margin-left: auto; /* extra guarantee it goes right */
 }
-
-/* Extra space after the last section so it can scroll above the footer */
-#contact{ padding-bottom: 120px; }
