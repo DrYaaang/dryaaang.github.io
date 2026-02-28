@@ -298,15 +298,7 @@ p{margin:0; color: var(--muted); line-height:1.6}
 
 /* Optional: divider line when opened */
 .expandableCard[open] > :not(summary){
-  border-top: 1px solid var(--border);
-  padding-top: 14px;
-}
-
-/* Optional: subtle hover on the clickable title area */
-.expandableTitle:hover{
-  background: rgba(15,23,42,.03);
-  border-radius: var(--r);
-}
+  border-top: none; }
 
 /* Remove the default <details>/<summary> marker triangle (all browsers) */
 details.expandableCard > summary{
