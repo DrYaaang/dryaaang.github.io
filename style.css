@@ -402,7 +402,7 @@ textarea{min-height:140px; resize:vertical}
 
 /* ===== Footer ===== */
 .footer{
-  width: 100%;
+  width: 1000%;
   display: flex;
   align-items: center;
   justify-content: space-between; /* left + right */
