@@ -176,9 +176,7 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 }
 
 /* Extra space after the last section so it can scroll above the footer */
-#contact{
-  padding-bottom: 200px;  /* adjust: 120–220px */
-}
+#contact{ padding-bottom: 120px; }
 
 
 
