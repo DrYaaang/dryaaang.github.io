@@ -408,5 +408,4 @@ textarea{min-height:140px; resize:vertical}
 
 .footer .footerRight{
   margin-left: auto; /* extra guarantee it goes right */
-  padding-bottom: 120px;  /* extra space after footer */
 }
