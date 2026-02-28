@@ -175,8 +175,8 @@ nav.links.equal a.pill{ text-decoration: none !important; }
    margin-bottom: 600px;     /* adds space after each section */
 }
 
-/* Extra space after the last section so it can scroll above the footer */
-#contact{ padding-bottom: 120px; }
+/* Extra space after the last section */
+#contact{ padding-bottom: 80px; }
 
 
 
@@ -411,4 +411,4 @@ textarea{min-height:140px; resize:vertical}
 }
 
 /* Extra space after the last section so it can scroll above the footer */
-#contact{ padding-bottom: 50px; }
+#contact{ padding-bottom: 120px; }
