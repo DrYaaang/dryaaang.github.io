@@ -177,7 +177,7 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 
 /* Extra space after the last section so it can scroll above the footer */
 #contact{
-  padding-bottom: 300px;  /* adjust: 120–220px */
+  padding-bottom: 200px;  /* adjust: 120–220px */
 }
 
 
@@ -402,21 +402,12 @@ textarea{min-height:140px; resize:vertical}
 
 /* ===== Footer ===== */
 .footer{
-  margin-top: 34px;
-  padding-top: 18px;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-
-  width: 100%;          /* important */
-  gap: 12px;            /* adds breathing room even if narrow */
-
-  flex-wrap: nowrap;
-  white-space: nowrap;
+  justify-content: space-between; /* left + right */
 }
-.footer span:last-child{
-  margin-left: auto;    /* pushes "Back to top" to the far right */
+
+.footer .footerRight{
+  margin-left: auto; /* extra guarantee it goes right */
 }
