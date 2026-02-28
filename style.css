@@ -409,3 +409,6 @@ textarea{min-height:140px; resize:vertical}
 .footer .footerRight{
   margin-left: auto; /* extra guarantee it goes right */
 }
+
+/* Extra space after the last section so it can scroll above the footer */
+#contact{ padding-bottom: 50px; }
