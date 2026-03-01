@@ -209,7 +209,7 @@ h2{
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
   font-size: 20px;
   letter-spacing: 0.02em;
-  margin: 8px 0 8px 0;  /* 8px below (and 8px above) */
+  margin: 0px 0 10px 0;  /* 8px below (and 8px above) */
 }
 
 p{margin:0; 
@@ -372,26 +372,24 @@ details.expandableCard > summary::marker{
   display:inline-flex;
   align-items:center;
   font-size: 13px;   /* text font size */
-  gap:10px;
+  gap:8px;
   padding:8px 14px;
   border-radius:999px;
   border:0px solid var(--border);
   box-shadow: var(--shadow);
-  background:rgba(255,255,255,.45);
+  background:rgba(255,255,255,.5);
 
   /* Smooth hover animation */
   transition: transform .12s ease, background-color .12s ease, border-color .12s ease;
   transform-origin: center;
 }
 
-/* Hover: slightly bigger + less transparent background */
 .iconBtn:hover{
   transform: scale(1.06);
   background: rgba(255,255,255,.85);
   box-shadow: 0 16px 44px rgba(15,23,42,.14);
 }
 
-/* For PNG/SVG icons loaded via <img> */
 .iconImg{
   width:22px;
   height:22px;
@@ -399,9 +397,6 @@ details.expandableCard > summary::marker{
   display:inline-block;
 }
 
-/* (Optional) if your PNGs are dark and you want them to match the green theme:
-   make them slightly transparent */
-.iconImg{ opacity:.9; }
 
 
 
