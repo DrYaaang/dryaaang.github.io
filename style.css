@@ -177,7 +177,7 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 }
 
 /* Extra space after the last section */
-#contact{ padding-bottom: -60px; }
+#contact{ margin-bottom: 0; }
 
 
 
