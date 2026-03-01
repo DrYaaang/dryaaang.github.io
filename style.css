@@ -197,11 +197,24 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 
 
 /* ===== Typography ===== */
-h1{font-family: "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-   font-size: clamp(30px, 3.4vw, 45px); line-height:1.06; margin:0; letter-spacing: 0.03em;}
-h2{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
-   margin:8px 0 8px; font-size:20px; letter-spacing: 0.02em;}
-p{margin:0; color: var(--muted); line-height:1.6}
+h1{
+  font-family: "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  font-size: clamp(30px, 3.4vw, 45px);
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  margin: 0 0 10px 0;   /* 10px below */
+}
+
+h2{
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
+  font-size: 20px;
+  letter-spacing: 0.02em;
+  margin: 8px 0 8px 0;  /* 8px below (and 8px above) */
+}
+
+p{margin:0; 
+  color: var(--muted); 
+  line-height:1.6}
 
 .hr{margin: 30px 0 50px 0; /* top right bottom left */
     border:0; 
@@ -353,7 +366,7 @@ details.expandableCard > summary::marker{
 
 
 /* ===== Icon links (using image files like .png) ===== */
-.iconRow{display:flex; flex-wrap:wrap; gap:20px; margin-top:30px}
+.iconRow{display:flex; flex-wrap:wrap; gap:20px; margin-top:20px}
 
 .iconBtn{
   display:inline-flex;
