@@ -298,6 +298,7 @@ p{margin:0;
 /* Add padding for the expanded content container */
 .expandableBody{
   padding: 0 36px 36px;
+  cursor: pointer;
 }
 
 /* Remove the default <details>/<summary> marker triangle (all browsers) */
