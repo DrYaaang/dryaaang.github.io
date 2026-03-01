@@ -498,6 +498,13 @@ textarea{min-height:140px; resize:vertical}
 
 
 
+
+
+
+
+
+
+
 /* ===== Footer ===== */
 .footer{
   width: 100%;
@@ -509,4 +516,115 @@ textarea{min-height:140px; resize:vertical}
 
 .footer .footerRight{
   margin-left: auto; /* extra guarantee it goes right */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Mobile layout (phones) ===== */
+@media (max-width: 760px){
+  :root{
+    /* nav becomes multi-row on phones, so content offset must increase */
+    --topOffset: 170px;
+  }
+
+  body{
+    font-size: 16px;
+  }
+
+  .container{
+    padding: var(--topOffset) 12px 40px;
+  }
+
+  .nav{
+    top: 10px;
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-radius: 20px;
+  }
+
+  .links.equal{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .links.equal .pill{
+    font-size: 14px;
+    padding: 8px 6px;
+  }
+
+  .section{
+    margin-bottom: 120px;
+  }
+
+  .profile{
+    text-align: center;
+  }
+
+  .avatarWrap{
+    justify-content: center;
+  }
+
+  .avatar{
+    width: 144px;
+    height: 144px;
+  }
+
+  .iconRow{
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .iconBtn{
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+
+  h1{
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  h2{
+    font-size: 18px;
+  }
+
+  .card{
+    padding: 14px;
+  }
+
+  .expandableCard > :not(summary){
+    padding: 0 16px 16px;
+  }
+
+  .footer{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-bottom: 56px;
+  }
+
+  .footer .footerRight{
+    margin-left: 0;
+  }
+}
+
+/* Avoid long links/terms causing horizontal overflow */
+.card,
+.card p,
+.card h2,
+.eduDegree,
+.eduInst{
+  overflow-wrap: anywhere;
 }
