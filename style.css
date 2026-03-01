@@ -44,37 +44,37 @@ body{
      use fixed background layers so it doesn’t look tiled vertically */
 background:
   /* Lake green*/
-  radial-gradient(1000px 1800px at 10% 0%, rgba(22, 163, 74, .18), transparent 66%),
+  radial-gradient(1000px 800px at 10% 0%, rgba(22, 163, 74, .18), transparent 66%),
 
   /* Warm amber*/
-  radial-gradient(1000px 2500px at 78% 10%, rgba(255, 196, 120, .18), transparent 68%),
+  radial-gradient(1000px 900px at 78% 10%, rgba(255, 196, 120, .20), transparent 68%),
 
   /* Forest green*/
-  radial-gradient(1000px 1500px at 22% 20%, rgba(20, 83, 45, .14), transparent 78%),
+  radial-gradient(1000px 800px at 22% 20%, rgba(20, 83, 45, .14), transparent 78%),
 
   /* Warm peach*/
-  radial-gradient(900px 2000px at 88% 30%, rgba(255, 156, 122, .18), transparent 68%),
+  radial-gradient(900px 1000px at 88% 30%, rgba(255, 156, 122, .18), transparent 68%),
 
   /* Lavender*/
-  radial-gradient(800px 1300px at 16% 40%, rgba(168, 85, 247, .10), transparent 78%),
+  radial-gradient(800px 1200px at 16% 40%, rgba(168, 85, 247, .10), transparent 78%),
 
   /* Mint green wash*/
-  radial-gradient(800px 2000px at 70% 34%, rgba(52, 211, 153, .13), transparent 60%),
+  radial-gradient(800px 900px at 70% 34%, rgba(52, 211, 153, .13), transparent 60%),
 
   /* Warm sand*/
-  radial-gradient(1100px 1800px at 18% 60%, rgba(255, 214, 165, .16), transparent 72%),
+  radial-gradient(1100px 1100px at 18% 60%, rgba(255, 214, 165, .16), transparent 72%),
    
   /* Soft blue tint*/
-  radial-gradient(1200px 22000px at 85% 70%, rgba(59, 130, 246, .18), transparent 70%),
+  radial-gradient(1200px 1500px at 85% 70%, rgba(59, 130, 246, .16), transparent 70%),
 
   /* Bright green*/
   radial-gradient(1100px 1600px at 35% 80%, rgba(34, 197, 94, .12), transparent 68%),
 
    /* Emerald green*/
-  radial-gradient(1000px 1800px at 70% 90%, rgba(16, 185, 129, .16), transparent 66%),
+  radial-gradient(1000px 1200px at 70% 90%, rgba(16, 185, 129, .16), transparent 66%),
 
   /* Warm amber*/
-  radial-gradient(1000px 2000px at 36% 100%, rgba(255, 196, 120, .22), transparent 60%),
+  radial-gradient(1000px 1200px at 36% 100%, rgba(255, 196, 120, .22), transparent 60%),
 
   /* Base greenish canvas — smooth background */
   linear-gradient(180deg, #f6fbf7 0%, #eef9f3 40%, #f6fbf7 100%);
