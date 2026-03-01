@@ -308,19 +308,17 @@ p{margin:0; color: var(--muted); line-height:1.6}
   padding: 0 18px 18px;
 }
 
-/* Optional: divider line when opened */
+/* Optional: divider line when opened 
 .expandableCard[open] > :not(summary){
-  border-top: none; }
+  border-top: none; }*/
 
 /* Remove the default <details>/<summary> marker triangle (all browsers) */
 details.expandableCard > summary{
   list-style: none;            /* older behavior */
 }
-
 details.expandableCard > summary::-webkit-details-marker{
   display: none;               /* Chrome/Safari */
 }
-
 details.expandableCard > summary::marker{
   content: "";                 /* Firefox */
 }
