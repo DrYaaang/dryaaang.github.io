@@ -218,6 +218,10 @@ p{margin:0; color: var(--muted); line-height:1.6}
   position: relative;
   transition: transform .15s ease, box-shadow .15s ease;
 }
+.card p{
+  text-align: justify;
+  text-justify: inter-word; 
+}
 .card:hover{
   transform: translateY(-3px) scale(1.02); /* slightly bigger */
   z-index: 5; /* draw above nearby cards */
@@ -228,6 +232,14 @@ p{margin:0; color: var(--muted); line-height:1.6}
   .half{grid-column: span 6}
   .third{grid-column: span 4}
 }
+
+
+
+
+
+
+
+
 
 /* ===== Profile header + photo ===== */
 .profile{
@@ -374,6 +386,12 @@ details.expandableCard > summary::marker{
 /* ===== Lists ===== */
 .list{margin:10px 0 0; padding-left:18px; color: var(--muted)}
 .list li{margin:7px 0}
+
+
+
+
+
+
 
 /* ===== Education: invisible 3-column table ===== */
 .eduTable3{
