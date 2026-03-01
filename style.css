@@ -262,7 +262,6 @@ p{margin:0; color: var(--muted); line-height:1.6}
 
 
 /* =====  Expandable Card ===== */
-.grid{ display:grid; gap:28px; }
 .expandableCard{ padding: 0;                 /* no padding outsid  */
 }
 
