@@ -241,46 +241,14 @@ p{margin:0; color: var(--muted); line-height:1.6}
 
 
 
-/* ===== Profile header + photo ===== */
-.profile{
-  display:grid;
-  gap:16px;
-}
-@media (min-width: 760px){
-  .profile{
-    grid-template-columns: 200px 1fr;
-    align-items: start;
-  }
-}
-
-.avatarWrap{
-  display:flex;
-  justify-content:flex-start;
-}
-.avatar{
-  width: 200px;
-  height: 200px;
-  border-radius: 999px;                 /* round */
-  object-fit: cover;                   /* keep proportions */
-  border: 2px solid rgba(50,50,50,.35);
-  box-shadow: 0 12px 26px rgba(15,23,42,.12);
-  background: #fff;
-}
 
 
 
 
 
-
-
-
-
-
-
-
-/* ===== Generic Expandable Card ===== */
-.expandableCard{
-  padding: 0;                 /* we'll control padding inside */
+/* =====  Expandable Card ===== */
+.expandableCard{gap:28px;
+  padding: 0;                 /* no padding outsid  */
 }
 
 /* Make the summary look like the top of a normal card */
@@ -318,6 +286,46 @@ details.expandableCard > summary::-webkit-details-marker{
 details.expandableCard > summary::marker{
   content: "";                 /* Firefox */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Profile header + photo ===== */
+.profile{
+  display:grid;
+  gap:16px;
+}
+@media (min-width: 760px){
+  .profile{
+    grid-template-columns: 200px 1fr;
+    align-items: start;
+  }
+}
+
+.avatarWrap{
+  display:flex;
+  justify-content:flex-start;
+}
+.avatar{
+  width: 200px;
+  height: 200px;
+  border-radius: 999px;                 /* round */
+  object-fit: cover;                   /* keep proportions */
+  border: 2px solid rgba(50,50,50,.35);
+  box-shadow: 0 12px 26px rgba(15,23,42,.12);
+  background: #fff;
+}
+
+
 
 
 
