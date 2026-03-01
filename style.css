@@ -111,6 +111,9 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 
 
 
+
+
+
 /* ===== Fixed top navigation (equal tabs) ===== */
 .nav{
   position: fixed;
@@ -136,6 +139,7 @@ nav.links.equal a.pill{ text-decoration: none !important; }
   grid-template-columns: repeat(5, 1fr); /* 5 equal tabs */
   gap: 8px;
 }
+
 
 
 
@@ -185,6 +189,13 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 
 
 
+
+
+
+
+
+
+
 /* ===== Typography ===== */
 h1{font-family: "Space Grotesk", Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial;
    font-size: clamp(30px, 3.4vw, 45px); line-height:1.06; margin:0; letter-spacing: 0.03em;}
@@ -205,8 +216,12 @@ p{margin:0; color: var(--muted); line-height:1.6}
 
 
 
+
+
+
+
 /* ===== Cards + layout ===== */
-.grid{display:grid; gap:28px}
+.grid{ display:grid; gap:28px; }
 .cards{grid-template-columns: repeat(12, 1fr)}
 .card{
   grid-column: span 12;
@@ -247,8 +262,8 @@ p{margin:0; color: var(--muted); line-height:1.6}
 
 
 /* =====  Expandable Card ===== */
-.expandableCard{gap:28px;
-  padding: 0;                 /* no padding outsid  */
+.grid{ display:grid; gap:28px; }
+.expandableCard{ padding: 0;                 /* no padding outsid  */
 }
 
 /* Make the summary look like the top of a normal card */
