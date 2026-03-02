@@ -282,6 +282,11 @@ p{margin:0;
   list-style: none;           /* remove default marker */
 }
 
+/* Force pointer on all title content across browsers */
+.expandableTitle *{
+  cursor: pointer;
+}
+
 /* Remove the default triangle in Chrome/Safari */
 .expandableTitle::-webkit-details-marker{ display:none; }
 
