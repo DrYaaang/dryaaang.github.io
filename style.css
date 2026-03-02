@@ -561,7 +561,7 @@ textarea{min-height:140px; resize:vertical}
   line-height: 1;
   color: #fff;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow: 0 12px 28px rgba(15,23,42,.24);
+  box-shadow: none;
   text-decoration: none !important;
   z-index: 1001;
   transition: transform .14s ease, box-shadow .14s ease;
@@ -569,7 +569,7 @@ textarea{min-height:140px; resize:vertical}
 
 .toTopBtn:hover{
   transform: translateY(-2px) scale(1.03);
-  box-shadow: 0 16px 30px rgba(15,23,42,.28);
+  box-shadow: none;
 }
 
 .toTopBtn:active{
