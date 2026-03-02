@@ -60,10 +60,10 @@ background:
   radial-gradient(800px 800px at 26% 40%, rgba(168, 85, 247, .11), transparent 72%),
 
   /* Mint green wash*/
-  radial-gradient(800px 1300px at 65% 34%, rgba(52, 211, 153, .13), transparent 40%),
+  radial-gradient(800px 1300px at 65% 50%, rgba(52, 211, 153, .13), transparent 40%),
 
   /* Warm sand*/
-  radial-gradient(800px 800px at 28% 60%, rgba(255, 214, 165, .16), transparent 60%),
+  radial-gradient(800px 800px at 28% 60%, rgba(255, 214, 165, 0.20), transparent 40%),
    
   /* Soft blue tint*/
   radial-gradient(800px 1200px at 75% 70%, rgba(59, 130, 246, .16), transparent 70%),
