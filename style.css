@@ -180,7 +180,7 @@ nav.links.equal a.pill{ text-decoration: none !important; }
   border: 1px solid transparent;
 
   /* For smooth hover */
-  transition: transform .12s ease, color .12s ease, font-weight .12s ease, background-color .12s ease;
+  transition: transform .25s ease, color .25s ease, font-weight .25s ease, background-color .25s ease;
   transform-origin: center;
 }
 
@@ -264,7 +264,7 @@ p{margin:0;
   background: var(--card);
   box-shadow: var(--shadow);
   position: relative;
-  transition: transform .15s ease, box-shadow .15s ease;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 .card p{
   text-align: justify;
@@ -401,7 +401,7 @@ details.expandableCard > summary::marker{
   background:rgba(255,255,255,.5);
 
   /* Smooth hover animation */
-  transition: transform .12s ease, background-color .12s ease, border-color .12s ease;
+  transition: transform .25s ease, background-color .25s ease, border-color .25s ease;
   transform-origin: center;
 }
 
@@ -564,7 +564,7 @@ textarea{min-height:140px; resize:vertical}
   box-shadow: none;
   text-decoration: none !important;
   z-index: 1001;
-  transition: transform .14s ease, box-shadow .14s ease;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .toTopBtn:hover{
@@ -652,7 +652,7 @@ textarea{min-height:140px; resize:vertical}
     height: 2px;
     border-radius: 999px;
     background: var(--text);
-    transition: transform .18s ease, opacity .18s ease;
+    transition: transform .25s ease, opacity .25s ease;
   }
 
   .nav.navOpen .navToggle span:nth-child(1){
