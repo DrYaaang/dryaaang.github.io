@@ -138,6 +138,10 @@ nav.links.equal a.pill{ text-decoration: none !important; }
   box-shadow: 0 10px 30px rgba(15,23,42,.08);
 }
 
+.navToggle{
+  display: none;
+}
+
 /* The links become a 5-column grid */
 .links.equal{
   width: 100%;
@@ -546,8 +550,7 @@ textarea{min-height:140px; resize:vertical}
 /* ===== Mobile layout (phones) ===== */
 @media (max-width: 760px){
   :root{
-    /* nav becomes multi-row on phones, so content offset must increase */
-    --topOffset: 170px;
+    --topOffset: 86px;
   }
 
   body{
@@ -571,17 +574,63 @@ textarea{min-height:140px; resize:vertical}
     top: 10px;
     width: calc(100% - 16px);
     padding: 8px;
-    border-radius: 20px;
+    border-radius: 14px;
+  }
+
+  .navToggle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 8px 0;
+    border: 0;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .navToggle span{
+    width: 24px;
+    height: 2px;
+    border-radius: 999px;
+    background: var(--text);
+    transition: transform .18s ease, opacity .18s ease;
+  }
+
+  .nav.navOpen .navToggle span:nth-child(1){
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .nav.navOpen .navToggle span:nth-child(2){
+    opacity: 0;
+  }
+
+  .nav.navOpen .navToggle span:nth-child(3){
+    transform: translateY(-6px) rotate(-45deg);
   }
 
   .links.equal{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: none;
+    grid-template-columns: 1fr;
     gap: 6px;
+    margin-top: 8px;
+  }
+
+  .nav.navOpen .links.equal{
+    display: grid;
+  }
+
+  .nav.navOpen + .container{
+    padding-top: 320px;
   }
 
   .links.equal .pill{
     font-size: 14px;
-    padding: 8px 6px;
+    padding: 10px 8px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.8);
   }
 
   .section{

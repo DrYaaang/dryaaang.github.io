@@ -19,7 +19,12 @@
 <body>
   <!-- Step: fixed top navigation (anchors scroll to sections on this same page) -->
   <header class="nav">
-    <nav class="links equal">
+    <button class="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="siteNav" class="links equal">
       <a class="pill" href="#home">Home</a>
       <a class="pill" href="#papers">Papers & Patent</a>
       <a class="pill" href="#experience">Experience</a>
@@ -350,6 +355,50 @@
 
   </div>
 <script>
+  // Mobile nav: hamburger open/close and collapse after link tap.
+  const nav = document.querySelector('.nav');
+  const navToggle = document.querySelector('.navToggle');
+  const navPills = document.querySelectorAll('.nav .pill');
+  const mobileQuery = window.matchMedia('(max-width: 760px)');
+
+  const closeMobileNav = () => {
+    if (!nav || !navToggle) return;
+    nav.classList.remove('navOpen');
+    document.body.classList.remove('nav-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+  };
+
+  if (nav && navToggle) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('navOpen');
+      document.body.classList.toggle('nav-open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navPills.forEach((pill) => {
+      pill.addEventListener('click', () => {
+        if (mobileQuery.matches) closeMobileNav();
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!mobileQuery.matches) return;
+      if (!nav.classList.contains('navOpen')) return;
+      if (nav.contains(event.target)) return;
+      closeMobileNav();
+    });
+
+    const handleViewportChange = (event) => {
+      if (!event.matches) closeMobileNav();
+    };
+
+    if (mobileQuery.addEventListener) {
+      mobileQuery.addEventListener('change', handleViewportChange);
+    } else if (mobileQuery.addListener) {
+      mobileQuery.addListener(handleViewportChange);
+    }
+  }
+
   // Ensure expanded content is wrapped so .expandableBody styles apply
   // and collapse cards when clicking outside the <summary> area.
   document.querySelectorAll('details.expandableCard').forEach((d) => {
