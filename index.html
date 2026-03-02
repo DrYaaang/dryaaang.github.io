@@ -4,7 +4,7 @@
   <!-- Basic metadata -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yang Yang - Portfolio</title>
+  <title>Yang Yang – Portfolio</title>
 
   <!-- add google font links "Space Grotesk" and Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -348,14 +348,27 @@
 
   </div>
 <script>
-  // Collapse expandable cards when clicking outside the <summary> area
+  // Ensure expanded content is wrapped so .expandableBody styles apply
+  // and collapse cards when clicking outside the <summary> area.
   document.querySelectorAll('details.expandableCard').forEach((d) => {
+    const summary = d.querySelector('summary');
+    if (!summary) return;
+
+    let body = d.querySelector('.expandableBody');
+    if (!body) {
+      body = document.createElement('div');
+      body.className = 'expandableBody';
+      while (summary.nextSibling) {
+        body.appendChild(summary.nextSibling);
+      }
+      d.appendChild(body);
+    }
+
     d.addEventListener('click', (e) => {
       // If card is closed, let default behavior open it via summary click
       if (!d.open) return;
 
       // If click is inside summary, let default toggle handle it
-      const summary = d.querySelector('summary');
       if (summary && summary.contains(e.target)) return;
 
       // Don't collapse when clicking links or form controls inside
