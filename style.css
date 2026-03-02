@@ -534,12 +534,51 @@ textarea{min-height:140px; resize:vertical}
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between; /* left + right */
-  padding-bottom: 200px;  /* extra space after footer */
+  justify-content: center;
+  padding-bottom: 120px;
+  text-align: center;
 }
 
-.footer .footerRight{
-  margin-left: auto; /* extra guarantee it goes right */
+
+
+
+
+
+
+/* ===== Floating back-to-top button ===== */
+.toTopBtn{
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 12px 28px rgba(15,23,42,.24);
+  text-decoration: none !important;
+  z-index: 1001;
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+
+.toTopBtn:hover{
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 16px 30px rgba(15,23,42,.28);
+}
+
+.toTopBtn:active{
+  transform: translateY(0) scale(.98);
+}
+
+.toTopBtn:focus-visible{
+  outline: 3px solid rgba(34, 197, 94, .35);
+  outline-offset: 2px;
 }
 
 
@@ -694,14 +733,15 @@ textarea{min-height:140px; resize:vertical}
   }
 
   .footer{
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
     padding-bottom: 56px;
   }
 
-  .footer .footerRight{
-    margin-left: 0;
+  .toTopBtn{
+    right: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
   }
 }
 
