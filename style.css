@@ -16,8 +16,8 @@
   --bodyFontSize: 17px;
 
   /* Green-ish theme */
-  --accent: #166433;       /* green-600 */
-  --accent2:#285137;       /* green-500 */
+  --accent: #24924c;       /* green-600 */
+  --accent2:#255a38;       /* green-500 */
 
   --navH: 74px;   /* Fixed navigation bar height */
   --topOffset: calc(var(--navH) + 50px); /* Fixed offset from the top */
