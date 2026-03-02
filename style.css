@@ -16,8 +16,8 @@
   --bodyFontSize: 17px;
 
   /* Green-ish theme */
-  --accent: #16a34a;       /* green-600 */
-  --accent2:#22c55e;       /* green-500 */
+  --accent: #166433;       /* green-600 */
+  --accent2:#285137;       /* green-500 */
 
   --navH: 74px;   /* Fixed navigation bar height */
   --topOffset: calc(var(--navH) + 50px); /* Fixed offset from the top */
@@ -89,6 +89,14 @@ background:
 
 a{color:inherit; text-decoration:none}
 a:hover{ text-decoration: underline; }
+
+/* Accent color only for text links inside cards */
+.card a:not(.iconBtn):not(.pill):not(.btn){
+  color: var(--accent);
+}
+.card a:not(.iconBtn):not(.pill):not(.btn):hover{
+  color: var(--accent2);
+}
 
 /* Never underline icon & navigation buttons (normal and hover) */
 a.iconBtn,
