@@ -178,7 +178,7 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 }
 
 /* Extra space after the last section */
-#contact{ margin-bottom: 120px; }
+#contact{ margin-bottom: 480px; }
 
 
 
@@ -513,7 +513,7 @@ textarea{min-height:140px; resize:vertical}
   display: flex;
   align-items: center;
   justify-content: space-between; /* left + right */
-  padding-bottom: 300px;  /* extra space after footer */
+  padding-bottom: 120px;  /* extra space after footer */
 }
 
 .footer .footerRight{
