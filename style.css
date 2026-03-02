@@ -139,7 +139,16 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 }
 
 .navToggle{
-  display: none;
+  display: none !important;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  pointer-events: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
 
 /* The links become a 5-column grid */
@@ -148,6 +157,7 @@ nav.links.equal a.pill{ text-decoration: none !important; }
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 equal tabs */
   gap: 8px;
+  margin: 0;
 }
 
 
@@ -574,12 +584,19 @@ textarea{min-height:140px; resize:vertical}
     top: 10px;
     width: calc(100% - 16px);
     padding: 8px;
-    border-radius: 14px;
+    border-radius: 999px;
+  }
+
+  .nav.navOpen{
+    border-radius: 28px;
   }
 
   .navToggle{
+    display: flex !important;
+    pointer-events: auto;
     width: 100%;
-    display: flex;
+    height: auto;
+    margin: 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
