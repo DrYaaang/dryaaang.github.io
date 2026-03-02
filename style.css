@@ -39,6 +39,7 @@ body{
    font-size: var(--bodyFontSize);     /* increase base text size */
    line-height: 1.5;    /* improves readability */
    color: var(--text);
+   background-color: #95c0a3; /* fallback color if gradients fail */
 
   /* Continuous “one wallpaper” background:
      use fixed background layers so it doesn’t look tiled vertically */
@@ -177,7 +178,7 @@ nav.links.equal a.pill{ text-decoration: none !important; }
 }
 
 /* Extra space after the last section */
-#contact{ margin-bottom: 0; }
+#contact{ margin-bottom: 120px; }
 
 
 
@@ -511,7 +512,7 @@ textarea{min-height:140px; resize:vertical}
   display: flex;
   align-items: center;
   justify-content: space-between; /* left + right */
-  padding-bottom: 120px;  /* extra space after footer */
+  padding-bottom: 300px;  /* extra space after footer */
 }
 
 .footer .footerRight{
@@ -542,6 +543,15 @@ textarea{min-height:140px; resize:vertical}
 
   body{
     font-size: 16px;
+    /* Lighter stack for mobile browsers that may skip complex backgrounds */
+    background:
+      radial-gradient(900px 700px at 12% 0%, rgba(22, 163, 74, .20), transparent 65%),
+      radial-gradient(700px 620px at 88% 12%, rgba(59, 130, 246, .16), transparent 65%),
+      radial-gradient(900px 760px at 50% 100%, rgba(16, 185, 129, .14), transparent 70%),
+      linear-gradient(180deg, #f1faef 0%, #e6f5ea 45%, #f1faef 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: scroll;
   }
 
   .container{
