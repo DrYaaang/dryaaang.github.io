@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yang Yang - Reading List</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="Images/websiteicon.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="readingPage">
+  <div class="container">
+    <main id="top" class="section">
+      <h1>Reading List</h1>
+      <div class="hr"></div>
+
+      <section class="readingList">
+        <details class="card expandableCard readingCard">
+          <summary class="expandableTitle bookSummary">
+            <img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9780062316097-L.jpg" alt="Sapiens book cover" />
+            <div>
+              <h2 class="bookTitle">Sapiens</h2>
+              <p class="bookAuthor">Yuval Noah Harari</p>
+            </div>
+          </summary>
+          <p>A broad and thought-provoking history of humankind. I appreciated how it connects biology, culture, and economics in one narrative.</p>
+        </details>
+
+        <details class="card expandableCard readingCard">
+          <summary class="expandableTitle bookSummary">
+            <img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9780735211292-L.jpg" alt="Atomic Habits book cover" />
+            <div>
+              <h2 class="bookTitle">Atomic Habits</h2>
+              <p class="bookAuthor">James Clear</p>
+            </div>
+          </summary>
+          <p>Practical and clear. The habit loop and environment design ideas were the most useful for building consistent daily routines.</p>
+        </details>
+
+        <details class="card expandableCard readingCard">
+          <summary class="expandableTitle bookSummary">
+            <img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9780374533557-L.jpg" alt="Thinking, Fast and Slow book cover" />
+            <div>
+              <h2 class="bookTitle">Thinking, Fast and Slow</h2>
+              <p class="bookAuthor">Daniel Kahneman</p>
+            </div>
+          </summary>
+          <p>Dense but rewarding. It helped me better recognize cognitive bias in daily decisions and technical judgment.</p>
+        </details>
+
+        <details class="card expandableCard readingCard">
+          <summary class="expandableTitle bookSummary">
+            <img class="bookCover" src="https://covers.openlibrary.org/b/isbn/9781781257654-L.jpg" alt="The Culture Map book cover" />
+            <div>
+              <h2 class="bookTitle">The Culture Map</h2>
+              <p class="bookAuthor">Erin Meyer</p>
+            </div>
+          </summary>
+          <p>Very relevant for international collaboration. The communication framework is practical and easy to apply in real teamwork.</p>
+        </details>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>© 2026 Yang Yang</span>
+    </footer>
+  </div>
+
+  <a class="toTopBtn" href="#top" aria-label="Back to top">↑</a>
+
+  <script>
+    // Ensure expanded content is wrapped so .expandableBody styles apply
+    // and collapse cards when clicking outside the <summary> area.
+    document.querySelectorAll('details.expandableCard').forEach((d) => {
+      const summary = d.querySelector('summary');
+      if (!summary) return;
+
+      let body = d.querySelector('.expandableBody');
+      if (!body) {
+        body = document.createElement('div');
+        body.className = 'expandableBody';
+        while (summary.nextSibling) {
+          body.appendChild(summary.nextSibling);
+        }
+        d.appendChild(body);
+      }
+
+      d.addEventListener('click', (e) => {
+        if (!d.open) return;
+        if (summary.contains(e.target)) return;
+        if (e.target.closest('a, button, input, textarea, select, label')) return;
+        d.open = false;
+      });
+    });
+  </script>
+</body>
+</html>
