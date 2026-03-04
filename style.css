@@ -342,12 +342,19 @@ details.expandableCard > summary::marker{
 
 .readingList{
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.readingColumn{
+  display: flex;
+  flex-direction: column;
   gap: 28px;
 }
 
 .readingCard{
-  grid-column: 4 / span 6; /* half-width, centered */
+  width: 100%;
 }
 
 .bookSummary{
@@ -773,7 +780,16 @@ textarea{min-height:140px; resize:vertical}
   }
 
   .readingCard{
-    grid-column: span 12;
+    width: 100%;
+  }
+
+  .readingList{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .readingColumn{
+    gap: 20px;
   }
 
   .bookSummary{
