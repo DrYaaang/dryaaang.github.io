@@ -418,8 +418,7 @@
     }
   }
 
-  // Ensure expanded content is wrapped so .expandableBody styles apply
-  // and collapse cards when clicking outside the <summary> area.
+  // Expandable cards: smooth expand/collapse animation + click-outside-summary collapse.
   document.querySelectorAll('details.expandableCard').forEach((d) => {
     const summary = d.querySelector('summary');
     if (!summary) return;
@@ -434,18 +433,75 @@
       d.appendChild(body);
     }
 
+    const durationMs = 280;
+    let isAnimating = false;
+
+    const resetBodyAfterOpen = () => {
+      body.style.height = 'auto';
+      body.style.overflow = 'visible';
+      body.style.opacity = '1';
+    };
+
+    const openCard = () => {
+      if (isAnimating || d.open) return;
+      isAnimating = true;
+      d.open = true;
+      body.style.transition = 'none';
+      body.style.overflow = 'hidden';
+      body.style.height = '0px';
+      body.style.opacity = '0';
+      body.getBoundingClientRect();
+      body.style.transition = 'height 280ms ease, opacity 220ms ease';
+      body.style.height = body.scrollHeight + 'px';
+      body.style.opacity = '1';
+      window.setTimeout(() => {
+        resetBodyAfterOpen();
+        isAnimating = false;
+      }, durationMs);
+    };
+
+    const closeCard = () => {
+      if (isAnimating || !d.open) return;
+      isAnimating = true;
+      body.style.transition = 'none';
+      body.style.overflow = 'hidden';
+      body.style.height = body.scrollHeight + 'px';
+      body.style.opacity = '1';
+      body.getBoundingClientRect();
+      body.style.transition = 'height 280ms ease, opacity 220ms ease';
+      body.style.height = '0px';
+      body.style.opacity = '0';
+      window.setTimeout(() => {
+        d.open = false;
+        body.style.transition = 'none';
+        body.style.height = '0px';
+        body.style.opacity = '0';
+        isAnimating = false;
+      }, durationMs);
+    };
+
+    if (d.open) {
+      resetBodyAfterOpen();
+    } else {
+      body.style.height = '0px';
+      body.style.opacity = '0';
+      body.style.overflow = 'hidden';
+    }
+
+    summary.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (d.open) {
+        closeCard();
+      } else {
+        openCard();
+      }
+    });
+
     d.addEventListener('click', (e) => {
-      // If card is closed, let default behavior open it via summary click
-      if (!d.open) return;
-
-      // If click is inside summary, let default toggle handle it
-      if (summary && summary.contains(e.target)) return;
-
-      // Don't collapse when clicking links or form controls inside
+      if (!d.open || isAnimating) return;
+      if (summary.contains(e.target)) return;
       if (e.target.closest('a, button, input, textarea, select, label')) return;
-
-      // Otherwise, collapse
-      d.open = false;
+      closeCard();
     });
   });
 </script>
