@@ -366,12 +366,12 @@ details.expandableCard > summary::marker{
 }
 
 .bookCover{
-  width: 90%;
+  width: 92%;
   height: auto;
   aspect-ratio: auto;
   object-fit: cover;
   align-self: center;
-  border-radius: 12px;
+  border-radius: 0px;
   border: none;
   background: transparent;
   display: block;
