@@ -342,12 +342,13 @@ details.expandableCard > summary::marker{
 }
 
 .readingList{
-  column-count: 3;
+  columns: 3;
   column-gap: var(--cardGap);
+  column-fill: balance;
 }
 
 .readingCard{
-  display: block;
+  display: inline-block;
   width: 100%;
   margin: 0 0 var(--cardGap);
   break-inside: avoid;
@@ -795,8 +796,8 @@ textarea{min-height:140px; resize:vertical}
   }
 
   .readingList{
-    column-count: 1;
-    column-gap: 0;
+    columns: 3;
+    column-gap: var(--cardGap);
   }
 
   .readingCard{
