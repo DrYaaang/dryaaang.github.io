@@ -11,7 +11,7 @@
   --muted: #475569;
   --border: rgba(15,23,42,.10);
   --shadow: 0 10px 30px rgba(15,23,42,.08);
-  --r: 18px;
+  --r: 20px;
   --max: 980px;
   --bodyFontSize: 17px;
   --cardGap: 30px;
@@ -371,7 +371,7 @@ details.expandableCard > summary::marker{
   aspect-ratio: auto;
   object-fit: cover;
   align-self: center;
-  border-radius: 0px;
+  border-radius: var(--r);
   border: none;
   background: transparent;
   display: block;
