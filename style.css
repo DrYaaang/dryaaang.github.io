@@ -349,14 +349,11 @@ details.expandableCard > summary::marker{
 }
 
 .readingCard{
-  display: inline-block;
-  width: 100%;
+  display: block;
   margin: 0 0 var(--cardGap);
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
   overflow: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
 }
 
 .readingCard .expandableTitle{
@@ -368,8 +365,8 @@ details.expandableCard > summary::marker{
 }
 
 .readingCard:hover{
-  transform: translateY(-3px);
-  z-index: 3;
+  transform: none;
+  z-index: 2;
   background: rgba(255,255,255,.8);
   box-shadow: 0 16px 44px rgba(15,23,42,.14);
 }
@@ -809,10 +806,6 @@ textarea{min-height:140px; resize:vertical}
   .readingPage .container{
     max-width: min(calc(var(--max) * 1.5), 96vw);
     padding-top: 24px;
-  }
-
-  .readingCard{
-    width: 100%;
   }
 
   .readingList{
