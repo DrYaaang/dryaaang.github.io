@@ -366,13 +366,14 @@ details.expandableCard > summary::marker{
 }
 
 .bookCover{
-  width: 100%;
+  width: 90%;
   height: auto;
-  aspect-ratio: 2 / 3;
+  aspect-ratio: auto;
   object-fit: cover;
+  align-self: center;
   border-radius: 12px;
-  border: 1px solid var(--border);
-  background: #fff;
+  border: none;
+  background: transparent;
   display: block;
 }
 
@@ -595,10 +596,10 @@ textarea{min-height:140px; resize:vertical}
 
 
 
-/* ===== Floating back-to-top button ===== */
-.toTopBtn{
+/* ===== Floating navigation buttons ===== */
+.toTopBtn,
+.toHomeBtn{
   position: fixed;
-  right: 24px;
   bottom: 24px;
   width: 52px;
   height: 52px;
@@ -617,16 +618,27 @@ textarea{min-height:140px; resize:vertical}
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.toTopBtn:hover{
+.toTopBtn{
+  right: 24px;
+}
+
+.toHomeBtn{
+  left: 24px;
+}
+
+.toTopBtn:hover,
+.toHomeBtn:hover{
   transform: translateY(-2px) scale(1.03);
   box-shadow: none;
 }
 
-.toTopBtn:active{
+.toTopBtn:active,
+.toHomeBtn:active{
   transform: translateY(0) scale(.98);
 }
 
-.toTopBtn:focus-visible{
+.toTopBtn:focus-visible,
+.toHomeBtn:focus-visible{
   outline: 3px solid rgba(34, 197, 94, .35);
   outline-offset: 2px;
 }
@@ -807,12 +819,20 @@ textarea{min-height:140px; resize:vertical}
     padding-bottom: 56px;
   }
 
-  .toTopBtn{
-    right: 14px;
+  .toTopBtn,
+  .toHomeBtn{
     bottom: 14px;
     width: 48px;
     height: 48px;
     font-size: 22px;
+  }
+
+  .toTopBtn{
+    right: 14px;
+  }
+
+  .toHomeBtn{
+    left: 14px;
   }
 }
 
