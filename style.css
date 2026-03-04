@@ -255,7 +255,7 @@ p{margin:0;
 
 
 /* ===== Cards + layout ===== */
-.grid{ display:grid; var(--cardGap); }
+.grid{ display:grid; gap: var(--cardGap); }
 .cards{grid-template-columns: repeat(12, 1fr)}
 .card{
   grid-column: span 12;
