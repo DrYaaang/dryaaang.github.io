@@ -12,7 +12,7 @@
   --border: rgba(15,23,42,.10);
   --shadow: 0 10px 30px rgba(15,23,42,.08);
   --r: 20px;
-  --max: 980px;
+  --max: 1020px;
   --bodyFontSize: 17px;
   --cardGap: 30px;
 
@@ -338,21 +338,40 @@ details.expandableCard > summary::marker{
 
 /* ===== Reading list page ===== */
 .readingPage .container{
+  max-width: min(calc(var(--max) * 1.5), 96vw);
   padding-top: 44px;
 }
 
 .readingList{
-  columns: 3;
+  columns: 4;
   column-gap: var(--cardGap);
   column-fill: balance;
 }
 
 .readingCard{
-  display: block;
-  width: 150%;
+  display: inline-block;
+  width: 100%;
   margin: 0 0 var(--cardGap);
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
+  overflow: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.readingCard .expandableTitle{
+  border-radius: var(--r) var(--r) 0 0;
+}
+
+.readingCard:not([open]) .expandableTitle{
+  border-radius: var(--r);
+}
+
+.readingCard:hover{
+  transform: translateY(-3px);
+  z-index: 3;
+  background: rgba(255,255,255,.8);
+  box-shadow: 0 16px 44px rgba(15,23,42,.14);
 }
 
 .bookSummary{
@@ -363,7 +382,7 @@ details.expandableCard > summary::marker{
 }
 
 .bookCover{
-  width: 90%;
+  width: 100%;
   height: auto;
   aspect-ratio: auto;
   object-fit: cover;
@@ -788,6 +807,7 @@ textarea{min-height:140px; resize:vertical}
   }
 
   .readingPage .container{
+    max-width: min(calc(var(--max) * 1.5), 96vw);
     padding-top: 24px;
   }
 
@@ -796,7 +816,7 @@ textarea{min-height:140px; resize:vertical}
   }
 
   .readingList{
-    columns: 3;
+    columns: 4;
     column-gap: var(--cardGap);
   }
 
