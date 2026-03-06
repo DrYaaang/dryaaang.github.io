@@ -87,6 +87,41 @@
   <a class="toTopBtn" href="#top" aria-label="Back to top">↑</a>
 
   <script>
+    // Auto-distribute cards into 4 fixed columns (one-time), then keep positions stable.
+    const distributeReadingCards = () => {
+      const list = document.querySelector('.readingList');
+      if (!list) return;
+
+      const cards = Array.from(list.children).filter((el) => el.classList && el.classList.contains('readingCard'));
+      if (!cards.length) return;
+
+      const columnCount = 4;
+      const columns = Array.from({ length: columnCount }, () => {
+        const col = document.createElement('div');
+        col.className = 'readingColumn';
+        return col;
+      });
+
+      list.textContent = '';
+      columns.forEach((col) => list.appendChild(col));
+
+      const heights = new Array(columnCount).fill(0);
+      cards.forEach((card) => {
+        let targetIndex = 0;
+        for (let i = 1; i < columnCount; i += 1) {
+          if (heights[i] < heights[targetIndex]) targetIndex = i;
+        }
+        columns[targetIndex].appendChild(card);
+        heights[targetIndex] = columns[targetIndex].offsetHeight;
+      });
+    };
+
+    if (document.readyState === 'complete') {
+      distributeReadingCards();
+    } else {
+      window.addEventListener('load', distributeReadingCards, { once: true });
+    }
+
     // Expandable cards: smooth expand/collapse animation + click-outside-summary collapse.
     document.querySelectorAll('details.expandableCard').forEach((d) => {
       const summary = d.querySelector('summary');
