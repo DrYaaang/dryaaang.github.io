@@ -32,6 +32,17 @@
 
         <details class="card expandableCard readingCard">
           <summary class="expandableTitle bookSummary">
+            <img class="bookCover" src="https://covers.openlibrary.org/b/id/15176469-L.jpg" alt="Book cover" />
+            <div>
+              <h2 class="bookTitle">法制的细节</h2>
+              <p class="bookAuthor">罗翔</p>
+            </div>
+          </summary>
+          <p>A broad and thought-provoking history of humankind. I appreciated how it connects biology, culture, and economics in one narrative.</p>
+        </details>
+
+        <details class="card expandableCard readingCard">
+          <summary class="expandableTitle bookSummary">
             <img class="bookCover" src="https://ia600507.us.archive.org/view_archive.php?archive=/8/items/l_covers_0009/l_covers_0009_27.zip&file=0009273799-L.jpg" alt="Book cover" />
             <div>
               <h2 class="bookTitle">A Thousand Splendid Suns (灿烂千阳)</h2>
@@ -87,15 +98,16 @@
   <a class="toTopBtn" href="#top" aria-label="Back to top">↑</a>
 
   <script>
-    // Auto-distribute cards into 4 fixed columns (one-time), then keep positions stable.
+    // Auto-distribute cards into responsive fixed columns, then keep positions stable.
     const distributeReadingCards = () => {
       const list = document.querySelector('.readingList');
       if (!list) return;
 
-      const cards = Array.from(list.children).filter((el) => el.classList && el.classList.contains('readingCard'));
+      const cards = Array.from(list.querySelectorAll('.readingCard'));
       if (!cards.length) return;
 
-      const columnCount = 4;
+      const viewport = window.innerWidth;
+      const columnCount = viewport <= 760 ? 1 : viewport <= 900 ? 2 : viewport <= 1100 ? 3 : 4;
       const columns = Array.from({ length: columnCount }, () => {
         const col = document.createElement('div');
         col.className = 'readingColumn';
@@ -116,11 +128,14 @@
       });
     };
 
-    if (document.readyState === 'complete') {
-      distributeReadingCards();
-    } else {
-      window.addEventListener('load', distributeReadingCards, { once: true });
-    }
+    // Run immediately to avoid initial "one huge card" flash.
+    distributeReadingCards();
+
+    let distributeTimer = null;
+    window.addEventListener('resize', () => {
+      window.clearTimeout(distributeTimer);
+      distributeTimer = window.setTimeout(distributeReadingCards, 140);
+    });
 
     // Expandable cards: smooth expand/collapse animation + click-outside-summary collapse.
     document.querySelectorAll('details.expandableCard').forEach((d) => {
