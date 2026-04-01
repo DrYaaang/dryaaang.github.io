@@ -502,6 +502,13 @@
       body.style.overflow = 'hidden';
     }
 
+    summary.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        // Keep "Read more" links functional inside <summary> without toggling the card.
+        e.stopPropagation();
+      });
+    });
+
     summary.addEventListener('click', (e) => {
       e.preventDefault();
       if (d.open) {
